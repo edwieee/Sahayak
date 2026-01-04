@@ -1,141 +1,102 @@
+import { useState, useEffect } from "react";
 import { AppLayout } from "@/components/layout/AppLayout";
-import { Bell, Play, AlertTriangle, CheckCircle2, Info, Clock } from "lucide-react";
-
-const notifications = [
-  {
-    id: "1",
-    title: "Ayushman Bharat card ready",
-    message: "Your health card is ready for collection at PHC Andheri.",
-    time: "2 hours ago",
-    type: "success",
-    unread: true,
-  },
-  {
-    id: "2",
-    title: "Document verification pending",
-    message: "Please submit address proof for your ration card application.",
-    time: "1 day ago",
-    type: "warning",
-    unread: true,
-  },
-  {
-    id: "3",
-    title: "Job interview scheduled",
-    message: "Interview at ITI Andheri on Jan 20, 10:00 AM. Don't forget your resume.",
-    time: "2 days ago",
-    type: "info",
-    unread: false,
-  },
-  {
-    id: "4",
-    title: "Scholarship deadline reminder",
-    message: "Last date to apply for PM Vidya Lakshmi is Jan 25.",
-    time: "3 days ago",
-    type: "warning",
-    unread: false,
-  },
-  {
-    id: "5",
-    title: "Application submitted",
-    message: "Your legal aid request has been submitted successfully.",
-    time: "1 week ago",
-    type: "success",
-    unread: false,
-  },
-];
-
-const typeConfig = {
-  success: {
-    icon: CheckCircle2,
-    bgColor: "bg-secondary-soft",
-    iconColor: "text-secondary",
-  },
-  warning: {
-    icon: AlertTriangle,
-    bgColor: "bg-warning/10",
-    iconColor: "text-warning",
-  },
-  info: {
-    icon: Info,
-    bgColor: "bg-info/10",
-    iconColor: "text-info",
-  },
-};
+import { Bell, Info, ArrowLeft, ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "@/context/AuthContext";
+import { getItemById } from "@/utils/serviceData";
+import { mockApi } from "@/utils/mockApi";
 
 export default function Notifications() {
+  const navigate = useNavigate();
+  const { token } = useAuth();
+  const [notifications, setNotifications] = useState<any[]>([]);
+
+  useEffect(() => {
+    if (!token) {
+      navigate("/auth");
+      return;
+    }
+
+    const fetchNotifications = async () => {
+      try {
+        const data = await mockApi.user.getNotifications();
+        setNotifications(data);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+
+    fetchNotifications();
+  }, [token, navigate]);
+
   return (
-    <AppLayout topBarTitle="Notifications">
-      <div className="container-mobile py-4">
-        {/* SMS fallback notice */}
-        <div className="flex items-center gap-3 p-4 bg-muted rounded-xl mb-6">
-          <div className="w-2 h-2 rounded-full bg-secondary" />
-          <p className="text-sm">
-            <span className="font-medium">SMS updates enabled.</span>{" "}
-            <span className="text-muted-foreground">
-              You'll receive updates even when offline.
-            </span>
+    <AppLayout status="core">
+      <div className="container-mobile py-6 space-y-6">
+        <div className="flex items-center gap-3">
+          <Button variant="ghost" size="icon" onClick={() => navigate(-1)} className="rounded-full">
+            <ArrowLeft className="h-5 w-5" />
+          </Button>
+          <div>
+            <h1 className="text-xl font-bold">Your Notifications</h1>
+            <p className="text-xs text-muted-foreground">{notifications.length} alerts available</p>
+          </div>
+        </div>
+
+        <div className="space-y-4">
+          {notifications.length > 0 ? (
+            notifications.map((n) => {
+              const details = n.content_id ? getItemById(n.content_id) : null;
+              return (
+                <div
+                  key={n.notification_id}
+                  className="p-4 bg-card border rounded-2xl space-y-3 relative group overflow-hidden"
+                >
+                  <div className="absolute left-0 top-0 bottom-0 w-1 bg-primary" />
+                  <div className="flex justify-between items-start">
+                    <p className="text-xs text-primary font-bold uppercase tracking-wider">Content Update</p>
+                    <span className="text-[10px] text-muted-foreground">
+                      {new Date(n.created_at).toLocaleDateString()}
+                    </span>
+                  </div>
+                  <p className="text-sm font-medium leading-relaxed">{n.message}</p>
+
+                  {details && (
+                    <button
+                      onClick={() => navigate(`/service/${n.content_id}`)}
+                      className="flex items-center justify-between w-full p-3 bg-muted/30 rounded-xl hover:bg-muted/50 transition-all"
+                    >
+                      <span className="text-xs font-bold">{details.title}</span>
+                      <ChevronRight className="h-4 w-4" />
+                    </button>
+                  )}
+                </div>
+              );
+            })
+          ) : (
+            <div className="py-12 text-center space-y-6">
+              <div className="w-20 h-20 bg-muted rounded-full flex items-center justify-center mx-auto">
+                <Bell className="h-10 w-10 text-muted-foreground" />
+              </div>
+              <div className="space-y-2">
+                <h3 className="text-xl font-bold">All caught up!</h3>
+                <p className="text-sm text-muted-foreground max-w-xs mx-auto">
+                  When government information you follow is updated, we will alert you here.
+                </p>
+              </div>
+              <Button onClick={() => navigate("/home")} className="rounded-full px-8">
+                Explore Services
+              </Button>
+            </div>
+          )}
+        </div>
+
+        <div className="p-4 bg-primary/5 border border-primary/10 rounded-2xl flex items-start gap-3">
+          <Info className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+          <p className="text-xs text-muted-foreground leading-relaxed">
+            The Sahayak Portal automatically tracks your "Interested" topics to keep you informed about critical weekly changes.
           </p>
         </div>
-
-        {/* Notifications List */}
-        <div className="space-y-3">
-          {notifications.map((notification) => {
-            const config = typeConfig[notification.type as keyof typeof typeConfig];
-            const Icon = config.icon;
-            
-            return (
-              <div
-                key={notification.id}
-                className={`p-4 rounded-xl border transition-colors ${
-                  notification.unread 
-                    ? "bg-card border-primary/30" 
-                    : "bg-card border-border"
-                }`}
-              >
-                <div className="flex items-start gap-3">
-                  <div className={`w-10 h-10 rounded-full ${config.bgColor} flex items-center justify-center shrink-0`}>
-                    <Icon className={`h-5 w-5 ${config.iconColor}`} />
-                  </div>
-                  
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2 mb-1">
-                      {notification.unread && (
-                        <span className="w-2 h-2 rounded-full bg-primary" />
-                      )}
-                      <h3 className="font-semibold truncate">{notification.title}</h3>
-                    </div>
-                    
-                    <p className="text-sm text-muted-foreground line-clamp-2">
-                      {notification.message}
-                    </p>
-                    
-                    <div className="flex items-center gap-4 mt-3">
-                      <span className="text-xs text-muted-foreground flex items-center gap-1">
-                        <Clock className="h-3 w-3" />
-                        {notification.time}
-                      </span>
-                      
-                      <button
-                        className="text-xs text-primary font-medium flex items-center gap-1 hover:underline"
-                        onClick={() => {
-                          // Play audio version
-                        }}
-                      >
-                        <Play className="h-3 w-3" />
-                        Listen
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Mark all read */}
-        <button className="w-full text-center text-sm text-primary font-medium py-4 hover:underline">
-          Mark all as read
-        </button>
       </div>
     </AppLayout>
   );

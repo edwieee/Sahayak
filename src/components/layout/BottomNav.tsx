@@ -14,7 +14,7 @@ export function BottomNav() {
 
   return (
     <nav className="bottom-nav" role="navigation" aria-label="Main navigation">
-      <div className="flex items-center justify-around px-2 py-1">
+      <div className="flex items-center justify-around px-2 py-1 max-w-md mx-auto">
         {navItems.map((item) => {
           const isActive = location.pathname === item.path;
           return (
@@ -32,15 +32,6 @@ export function BottomNav() {
             </Link>
           );
         })}
-        
-        {/* SOS Button - Always visible */}
-        <Link
-          to="/sos"
-          className="sos-button w-12 h-12"
-          aria-label="Emergency SOS"
-        >
-          <AlertTriangle className="h-5 w-5" />
-        </Link>
       </div>
     </nav>
   );

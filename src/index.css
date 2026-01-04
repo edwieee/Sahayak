@@ -8,6 +8,77 @@
 */
 
 @layer base {
+  @keyframes progress {
+    from {
+      transform: scaleX(0);
+    }
+
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  @keyframes shine {
+    from {
+      transform: translateX(-100%);
+    }
+
+    to {
+      transform: translateX(100%);
+    }
+  }
+
+  .animate-progress {
+    animation: progress 2s ease-in-out forwards;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .glass {
+    @apply bg-white/20 backdrop-blur-lg border border-white/20 shadow-xl;
+  }
+
+  .glass-dark {
+    @apply bg-black/40 backdrop-blur-lg border border-white/10 shadow-2xl;
+  }
+
+  .pitch-section {
+    @apply min-h-[80vh] lg:min-h-screen flex flex-col justify-center items-center pt-24 pb-32 lg:pt-32 lg:pb-48 relative overflow-hidden scroll-mt-20;
+  }
+
+  .pitch-content {
+    @apply container-mobile relative z-10 w-full;
+  }
+
+  /* Desktop Split Layout */
+  .pitch-grid {
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full;
+  }
+
+  .pitch-card {
+    @apply p-8 md:p-12 rounded-[2rem] bg-card border shadow-xl;
+  }
+
+  .shadow-glow-emergency {
+    box-shadow: 0 0 20px rgba(220, 38, 38, 0.4), 0 0 40px rgba(220, 38, 38, 0.2);
+  }
+
   :root {
     /* Base Colors */
     --background: 30 25% 98%;
@@ -131,7 +202,9 @@
   }
 
   /* Improve tap targets for mobile */
-  button, a, [role="button"] {
+  button,
+  a,
+  [role="button"] {
     @apply min-h-[44px] min-w-[44px];
   }
 
@@ -142,7 +215,10 @@
 
   /* Respect reduced motion */
   @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
+
+    *,
+    *::before,
+    *::after {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
@@ -151,6 +227,7 @@
 }
 
 @layer components {
+
   /* Voice button - central CTA */
   .voice-button {
     @apply relative flex items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg;
@@ -170,6 +247,7 @@
       transform: scale(1);
       opacity: 1;
     }
+
     100% {
       transform: scale(1.5);
       opacity: 0;
@@ -301,6 +379,7 @@
       opacity: 0;
       transform: translateY(20px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
@@ -311,6 +390,7 @@
     from {
       opacity: 0;
     }
+
     to {
       opacity: 1;
     }
@@ -321,6 +401,7 @@
       opacity: 0;
       transform: scale(0.95);
     }
+
     to {
       opacity: 1;
       transform: scale(1);
@@ -330,10 +411,27 @@
 
 /* Staggered animation delays for bento cards - desktop only */
 @media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
-  .stagger-1 { animation-delay: 0.05s; }
-  .stagger-2 { animation-delay: 0.1s; }
-  .stagger-3 { animation-delay: 0.15s; }
-  .stagger-4 { animation-delay: 0.2s; }
-  .stagger-5 { animation-delay: 0.25s; }
-  .stagger-6 { animation-delay: 0.3s; }
+  .stagger-1 {
+    animation-delay: 0.05s;
+  }
+
+  .stagger-2 {
+    animation-delay: 0.1s;
+  }
+
+  .stagger-3 {
+    animation-delay: 0.15s;
+  }
+
+  .stagger-4 {
+    animation-delay: 0.2s;
+  }
+
+  .stagger-5 {
+    animation-delay: 0.25s;
+  }
+
+  .stagger-6 {
+    animation-delay: 0.3s;
+  }
 }

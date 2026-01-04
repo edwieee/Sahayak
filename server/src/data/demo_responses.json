@@ -1,0 +1,49 @@
+{
+    "aadhaar_bank_link": {
+        "query_id": "aadhaar_bank_link",
+        "language": "en",
+        "title": "Linking Aadhaar with Bank Account",
+        "short_response": "You can link your Aadhaar with your bank account either online or by visiting your bank or an Akshaya center near you.",
+        "step_by_step": [
+            "First, make sure your mobile number is linked with Aadhaar.",
+            "Next, visit your bank branch or an Akshaya center.",
+            "Provide your Aadhaar number and bank account details.",
+            "Verify using the OTP sent to your registered mobile number.",
+            "After verification, Aadhaar will be linked to your bank account."
+        ],
+        "documents_required": [
+            "Aadhaar Card",
+            "Bank Passbook or Account Number",
+            "Registered Mobile Number"
+        ],
+        "age_limit": "Minimum 18 years",
+        "important_notes": [
+            "Your mobile number must be active and linked with Aadhaar.",
+            "Details should exactly match bank records."
+        ],
+        "nearest_help_center": {
+            "type": "Akshaya Center",
+            "name": "Akshaya Center – Irinjalakuda",
+            "distance": "1.8 km",
+            "address": "Near Municipal Office, Irinjalakuda",
+            "phone": "+91 9XXXXXXXXX",
+            "working_hours": "9:30 AM – 5:00 PM"
+        },
+        "tts_text": "Here is a simple explanation on how to link Aadhaar with your bank account, and where you can go nearby for help.",
+        "podcast_mode": [
+            {
+                "speaker": "Person A",
+                "text": "Many people are unsure where to link Aadhaar with their bank account."
+            },
+            {
+                "speaker": "Person B",
+                "text": "Yes, they can either visit their bank or the nearest Akshaya center for help."
+            }
+        ],
+        "update": {
+            "title": "New Government Update",
+            "message": "The deadline for Aadhaar–bank linking has been extended till December 31.",
+            "notify": true
+        }
+    }
+}

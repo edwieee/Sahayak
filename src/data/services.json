@@ -1,0 +1,1778 @@
+{
+    "categories": [
+        {
+            "category": "Healthcare",
+            "items": [
+                {
+                    "id": "hc_001",
+                    "title": "Ayushman Bharat (PM-JAY)",
+                    "keywords": [
+                        "health insurance",
+                        "golden card",
+                        "free treatment",
+                        "hospital bill"
+                    ],
+                    "description": "Provides free health coverage up to 5 lakhs per family for secondary and tertiary care hospitalization.",
+                    "steps": [
+                        "Check name in the SECC-2011 database or PM-JAY list.",
+                        "Visit a nearby empanelled hospital or CSC center.",
+                        "Verify identity using Aadhaar or Ration Card.",
+                        "Collect your Ayushman Golden Card for cashless treatment."
+                    ],
+                    "documents_required": [
+                        "Aadhaar Card",
+                        "Ration Card",
+                        "Mobile Number"
+                    ],
+                    "eligibility": "Low-income families listed in SECC-2011 or holding specific Ration Cards.",
+                    "where_to_apply": "Common Service Center (CSC) or Empanelled Hospital",
+                    "facility_type": "Government Hospital",
+                    "notes": "Always carry the Golden Card during admission for cashless benefits."
+                },
+                {
+                    "id": "hc_002",
+                    "title": "Maternal Healthcare (J SY)",
+                    "keywords": [
+                        "pregnancy",
+                        "delivery",
+                        "cash assistance",
+                        "mother care"
+                    ],
+                    "description": "Financial assistance for pregnant women to promote institutional delivery in government hospitals.",
+                    "steps": [
+                        "Register pregnancy at the nearest health center within 12 weeks.",
+                        "Obtain an MCP (Mother and Child Protection) card.",
+                        "Complete at least 4 antenatal check-ups.",
+                        "Deliver baby in a government facility to receive cash incentive."
+                    ],
+                    "documents_required": [
+                        "MCP Card",
+                        "Aadhaar Card",
+                        "Bank Passbook"
+                    ],
+                    "eligibility": "All pregnant women over 19 years for first two live births.",
+                    "where_to_apply": "ANM or ASHA Worker",
+                    "facility_type": "Primary Health Centre",
+                    "notes": "Ensure bank account is linked to Aadhaar for direct benefit transfer."
+                },
+                {
+                    "id": "hc_003",
+                    "title": "Child Vaccination (Indradhanush)",
+                    "keywords": [
+                        "immunization",
+                        "polio",
+                        "bcg",
+                        "baby shots"
+                    ],
+                    "description": "Free vaccination for children and pregnant women against life-threatening diseases.",
+                    "steps": [
+                        "Visit nearest health center on designated 'Village Health Days'.",
+                        "Present the child's birth certificate or MCP card.",
+                        "Receive the vaccine according to the age schedule.",
+                        "Update the vaccination card for future visits."
+                    ],
+                    "documents_required": [
+                        "MCP Card",
+                        "Birth Certificate"
+                    ],
+                    "eligibility": "Infants and children up to 12 years; pregnant women.",
+                    "where_to_apply": "Government Dispensary",
+                    "facility_type": "Government Hospital",
+                    "notes": "Keep the vaccination card safe as it is required for school admissions."
+                },
+                {
+                    "id": "hc_004",
+                    "title": "Free Diagnostic Services",
+                    "keywords": [
+                        "blood test",
+                        "x-ray",
+                        "mri",
+                        "free checkup"
+                    ],
+                    "description": "Free essential diagnostic tests available at government healthcare facilities.",
+                    "steps": [
+                        "Consult a doctor at a government hospital.",
+                        "Obtain a prescription for the required tests.",
+                        "Visit the hospital lab or radiology department.",
+                        "Collect reports within the specified timeframe."
+                    ],
+                    "documents_required": [
+                        "Doctor Prescription",
+                        "OPD Card"
+                    ],
+                    "eligibility": "All citizens visiting government health facilities.",
+                    "where_to_apply": "Government Hospital Lab",
+                    "facility_type": "Government Hospital",
+                    "notes": "Some high-end tests like MRI may require a prior appointment."
+                },
+                {
+                    "id": "hc_005",
+                    "title": "Mental Health Support (Tele-MANAS)",
+                    "keywords": [
+                        "counselling",
+                        "stress",
+                        "depression",
+                        "mental health"
+                    ],
+                    "description": "24/7 free tele-mental health services and professional counselling.",
+                    "steps": [
+                        "Dial the toll-free number 14416.",
+                        "Select your preferred language.",
+                        "Speak with a trained counselor regarding your concerns.",
+                        "Receive a referral to a specialist if necessary."
+                    ],
+                    "documents_required": [
+                        "None"
+                    ],
+                    "eligibility": "Open to all citizens.",
+                    "where_to_apply": "Tele-Consultation",
+                    "facility_type": "District Hospital",
+                    "notes": "The service is completely confidential and free of cost."
+                },
+                {
+                    "id": "hc_006",
+                    "title": "Disability Certificate (UDID)",
+                    "keywords": [
+                        "handicap certificate",
+                        "pwd card",
+                        "disability benefits"
+                    ],
+                    "description": "A single document that provides identity and disability verification for government benefits.",
+                    "steps": [
+                        "Register online on the Swavlamban Card portal.",
+                        "Upload photo and disability documents.",
+                        "Choose the nearest government hospital for assessment.",
+                        "Visit the hospital on the scheduled date for medical examination."
+                    ],
+                    "documents_required": [
+                        "Aadhaar Card",
+                        "Passport Photo",
+                        "Medical Reports"
+                    ],
+                    "eligibility": "Persons with a disability of 40% or more.",
+                    "where_to_apply": "CSC Center or Online Portal",
+                    "facility_type": "District Hospital",
+                    "notes": "The UDID card is valid across all states in India."
+                },
+                {
+                    "id": "hc_007",
+                    "title": "TB Treatment (Nikshay)",
+                    "keywords": [
+                        "tuberculosis",
+                        "dots",
+                        "free medicine",
+                        "tb nutrition"
+                    ],
+                    "description": "Free diagnosis, medicine, and nutritional support for TB patients.",
+                    "steps": [
+                        "Visit a government hospital for sputum testing.",
+                        "Register under the Nikshay portal upon positive diagnosis.",
+                        "Start the DOTS treatment regimen.",
+                        "Provide bank details for the Rs. 500 monthly nutrition incentive."
+                    ],
+                    "documents_required": [
+                        "Aadhaar Card",
+                        "Bank Passbook",
+                        "Test Report"
+                    ],
+                    "eligibility": "Any person diagnosed with Tuberculosis.",
+                    "where_to_apply": "TB Control Center",
+                    "facility_type": "Government Hospital",
+                    "notes": "Do not stop the medication midway without consulting a doctor."
+                },
+                {
+                    "id": "hc_008",
+                    "title": "Senior Citizen Health Checkups",
+                    "keywords": [
+                        "old age health",
+                        "geriatric care",
+                        "free checkup"
+                    ],
+                    "description": "Specialized health screening and OPD services for citizens above 60 years.",
+                    "steps": [
+                        "Visit the dedicated Senior Citizen counter at the hospital.",
+                        "Register for a health screening card.",
+                        "Undergo routine checks for BP, Sugar, and vision.",
+                        "Consult the geriatric specialist."
+                    ],
+                    "documents_required": [
+                        "Aadhaar Card",
+                        "Age Proof"
+                    ],
+                    "eligibility": "Indian citizens aged 60 years and above.",
+                    "where_to_apply": "Government Hospital",
+                    "facility_type": "District Hospital",
+                    "notes": "Most hospitals have a separate queue for senior citizens."
+                },
+                {
+                    "id": "hc_009",
+                    "title": "Blood Bank Services",
+                    "keywords": [
+                        "blood donation",
+                        "blood availability",
+                        "plasma"
+                    ],
+                    "description": "Access to safe blood and blood components through government-run blood banks.",
+                    "steps": [
+                        "Check blood availability on the eRaktKosh portal.",
+                        "Obtain a blood requisition form from the hospital.",
+                        "Provide a replacement donor if required by hospital policy.",
+                        "Collect blood units after cross-matching."
+                    ],
+                    "documents_required": [
+                        "Doctor Requisition",
+                        "Patient ID"
+                    ],
+                    "eligibility": "Any patient in need of transfusion.",
+                    "where_to_apply": "Government Blood Bank",
+                    "facility_type": "Government Hospital",
+                    "notes": "Voluntary donors receive a certificate that can be used for future priority."
+                },
+                {
+                    "id": "hc_010",
+                    "title": "Jan Aushadhi (Generic Medicine)",
+                    "keywords": [
+                        "cheap medicine",
+                        "generic drugs",
+                        "pharmacy"
+                    ],
+                    "description": "Quality generic medicines available at much lower prices than branded ones.",
+                    "steps": [
+                        "Take your doctor's prescription to a Jan Aushadhi Kendra.",
+                        "Ask for the generic equivalent of the prescribed medicine.",
+                        "Verify the price and expiry date.",
+                        "Purchase the medicine at a subsidized rate."
+                    ],
+                    "documents_required": [
+                        "Doctor Prescription"
+                    ],
+                    "eligibility": "Open to all citizens.",
+                    "where_to_apply": "Jan Aushadhi Store",
+                    "facility_type": "Common Service Center (CSC)",
+                    "notes": "Medicines are 50% to 90% cheaper than market prices."
+                }
+            ]
+        },
+        {
+            "category": "Education",
+            "items": [
+                {
+                    "id": "ed_001",
+                    "title": "Pre-Matric Scholarship (SC/ST/OBC)",
+                    "keywords": [
+                        "school scholarship",
+                        "minority scholarship",
+                        "financial aid"
+                    ],
+                    "description": "Financial help for students in classes 1 to 10 to reduce school dropout rates.",
+                    "steps": [
+                        "Register on the National Scholarship Portal (NSP).",
+                        "Upload income and caste certificates.",
+                        "Submit application for school verification.",
+                        "Track status until the amount is credited to the bank."
+                    ],
+                    "documents_required": [
+                        "Caste Certificate",
+                        "Income Certificate",
+                        "Aadhaar",
+                        "Bank Passbook"
+                    ],
+                    "eligibility": "Students from reserved categories with family income below specified limits.",
+                    "where_to_apply": "Online Portal or CSC Center",
+                    "facility_type": "Common Service Center (CSC)",
+                    "notes": "Ensure the bank account is in the student's name or a joint account with parents."
+                },
+                {
+                    "id": "ed_002",
+                    "title": "Post-Matric Scholarship",
+                    "keywords": [
+                        "college scholarship",
+                        "degree scholarship",
+                        "higher education"
+                    ],
+                    "description": "Assistance for students pursuing Class 11, 12, Degree, or PG courses.",
+                    "steps": [
+                        "Apply via the National Scholarship Portal (NSP) or State portal.",
+                        "Upload previous year marksheet and fee receipts.",
+                        "Get the application verified by the College Head/Principal.",
+                        "Wait for District Officer approval."
+                    ],
+                    "documents_required": [
+                        "Previous Marksheet",
+                        "Fee Receipt",
+                        "Caste/Income Certificate",
+                        "Aadhaar"
+                    ],
+                    "eligibility": "Students enrolled in recognized colleges with required attendance.",
+                    "where_to_apply": "Online / Akshaya Center",
+                    "facility_type": "Akshaya Center",
+                    "notes": "Renew the scholarship every year to continue receiving benefits."
+                },
+                {
+                    "id": "ed_003",
+                    "title": "RTE Free School Admission",
+                    "keywords": [
+                        "free school",
+                        "private school entry",
+                        "rte 25%"
+                    ],
+                    "description": "25% reservation in private schools for children from weaker sections.",
+                    "steps": [
+                        "Check the RTE admission notification for your state.",
+                        "Register child's details on the state RTE portal.",
+                        "Select nearby private schools from the list.",
+                        "Participate in the lottery system and verify documents if selected."
+                    ],
+                    "documents_required": [
+                        "Birth Certificate",
+                        "Address Proof",
+                        "Income Certificate"
+                    ],
+                    "eligibility": "Children aged 6-14 from economically weaker sections.",
+                    "where_to_apply": "State Education Portal",
+                    "facility_type": "Common Service Center (CSC)",
+                    "notes": "Applications usually open between February and April."
+                },
+                {
+                    "id": "ed_004",
+                    "title": "PM Shri Schools",
+                    "keywords": [
+                        "model school",
+                        "best schools",
+                        "quality education"
+                    ],
+                    "description": "Enrollment in centrally upgraded schools providing high-quality infrastructure and learning.",
+                    "steps": [
+                        "Identify the nearest PM Shri designated school in your block.",
+                        "Visit the school office during the admission window.",
+                        "Submit the standard admission form.",
+                        "Attend the orientation for parents and students."
+                    ],
+                    "documents_required": [
+                        "Aadhaar Card",
+                        "Transfer Certificate",
+                        "Previous Marksheet"
+                    ],
+                    "eligibility": "Students eligible for standard school grades (Primary/Secondary).",
+                    "where_to_apply": "School Office",
+                    "facility_type": "Government School",
+                    "notes": "These schools focus on modern technology and skill-based learning."
+                },
+                {
+                    "id": "ed_005",
+                    "title": "National Means-cum-Merit Scholarship (NMMS)",
+                    "keywords": [
+                        "merit scholarship",
+                        "exam for money",
+                        "8th class exam"
+                    ],
+                    "description": "Scholarship for meritorious students of government schools based on an entrance exam.",
+                    "steps": [
+                        "Apply for the NMMS exam through the school in Class 8.",
+                        "Prepare for the Mental Ability Test (MAT) and Scholastic Aptitude Test (SAT).",
+                        "Appear for the state-level examination.",
+                        "If selected, open a bank account for scholarship transfers."
+                    ],
+                    "documents_required": [
+                        "7th Class Marksheet",
+                        "Income Certificate",
+                        "Category Certificate"
+                    ],
+                    "eligibility": "Class 8 students in govt/aided schools with income < 3.5 Lakhs.",
+                    "where_to_apply": "School Headmaster",
+                    "facility_type": "Government School",
+                    "notes": "Students must maintain at least 55% marks in subsequent classes to continue."
+                },
+                {
+                    "id": "ed_006",
+                    "title": "Central Sector Scheme for University Students",
+                    "keywords": [
+                        "college merit",
+                        "university scholarship",
+                        "degree aid"
+                    ],
+                    "description": "Scholarship for students who are in the top 20th percentile of their 12th board results.",
+                    "steps": [
+                        "Apply on the National Scholarship Portal after 12th results.",
+                        "Provide the board roll number for verification.",
+                        "Submit college admission proof.",
+                        "Complete the Aadhaar-based biometric authentication."
+                    ],
+                    "documents_required": [
+                        "12th Marksheet",
+                        "College ID Card",
+                        "Aadhaar Card",
+                        "Income Certificate"
+                    ],
+                    "eligibility": "Above 80th percentile in Class 12 and family income < 4.5 Lakhs.",
+                    "where_to_apply": "National Scholarship Portal",
+                    "facility_type": "Common Service Center (CSC)",
+                    "notes": "Professional course students (Medical/Engineering) are also eligible."
+                },
+                {
+                    "id": "ed_007",
+                    "title": "SWAYAM Free Online Courses",
+                    "keywords": [
+                        "online degree",
+                        "free certificate",
+                        "digital learning"
+                    ],
+                    "description": "Free online courses and certifications from top professors at IITs and IIMs.",
+                    "steps": [
+                        "Visit the SWAYAM portal or download the app.",
+                        "Register using an email ID.",
+                        "Join a course and watch the weekly video lectures.",
+                        "Register for the optional exam to get a verified certificate."
+                    ],
+                    "documents_required": [
+                        "None for learning",
+                        "ID proof for exam"
+                    ],
+                    "eligibility": "Anyone (students, teachers, or professionals).",
+                    "where_to_apply": "SWAYAM Portal",
+                    "facility_type": "Common Service Center (CSC)",
+                    "notes": "The learning is free; only a small fee is charged for the final certificate exam."
+                },
+                {
+                    "id": "ed_008",
+                    "title": "Vidyalakshmi Education Loan",
+                    "keywords": [
+                        "study loan",
+                        "bank loan for education",
+                        "low interest loan"
+                    ],
+                    "description": "A single portal for students to apply for education loans to multiple banks.",
+                    "steps": [
+                        "Register on the Vidyalakshmi portal.",
+                        "Fill out the Common Education Loan Application Form (CELAF).",
+                        "Search for loan schemes provided by various banks.",
+                        "Upload required academic and income documents."
+                    ],
+                    "documents_required": [
+                        "Admission Letter",
+                        "Fee Structure",
+                        "Parent's Income Proof",
+                        "Aadhaar"
+                    ],
+                    "eligibility": "Students who have secured admission to professional/technical courses.",
+                    "where_to_apply": "Vidyalakshmi Online Portal",
+                    "facility_type": "Bank Branch",
+                    "notes": "Interest subsidy is available for students from economically weaker sections."
+                },
+                {
+                    "id": "ed_009",
+                    "title": "Kasturba Gandhi Balika Vidyalaya (KGBV)",
+                    "keywords": [
+                        "girls residential school",
+                        "hostel for girls",
+                        "free girls education"
+                    ],
+                    "description": "Residential schools for girls from disadvantaged groups in backward blocks.",
+                    "steps": [
+                        "Visit the District Education Office or nearest KGBV school.",
+                        "Fill out the admission form for residential schooling.",
+                        "Provide category and age proof.",
+                        "Wait for the admission list based on vacancy."
+                    ],
+                    "documents_required": [
+                        "Caste Certificate",
+                        "Transfer Certificate",
+                        "Aadhaar"
+                    ],
+                    "eligibility": "Girls (Classes 6-12) from SC/ST/OBC/Minority or BPL families.",
+                    "where_to_apply": "Block Education Office",
+                    "facility_type": "Government School",
+                    "notes": "Education, lodging, and food are provided completely free of charge."
+                },
+                {
+                    "id": "ed_010",
+                    "title": "National Apprenticeship Training (NATS)",
+                    "keywords": [
+                        "internship",
+                        "technical training",
+                        "stipend"
+                    ],
+                    "description": "One-year program providing practical training to fresh graduates and diploma holders.",
+                    "steps": [
+                        "Register on the NATS portal.",
+                        "Enter educational details and upload a resume.",
+                        "Apply for apprenticeship vacancies in public or private sectors.",
+                        "Attend interviews and join to receive a monthly stipend."
+                    ],
+                    "documents_required": [
+                        "Degree/Diploma Certificate",
+                        "Aadhaar",
+                        "Bank Account"
+                    ],
+                    "eligibility": "Graduates or Diploma holders in technical or non-technical fields.",
+                    "where_to_apply": "NATS Portal",
+                    "facility_type": "Common Service Center (CSC)",
+                    "notes": "This program helps in gaining industry experience and improves job prospects."
+                }
+            ]
+        },
+        {
+            "category": "Jobs",
+            "items": [
+                {
+                    "id": "jb_001",
+                    "title": "MGNREGA Job Card",
+                    "keywords": [
+                        "100 days work",
+                        "village work",
+                        "mgnrega card"
+                    ],
+                    "description": "Guaranteed 100 days of wage employment in a financial year to a rural household.",
+                    "steps": [
+                        "Visit the local Gram Panchayat office.",
+                        "Submit an application for registration (oral or written).",
+                        "Gram Panchayat will verify details and issue the Job Card.",
+                        "Submit a work demand request to get employment within 15 days."
+                    ],
+                    "documents_required": [
+                        "Aadhaar Card",
+                        "Ration Card",
+                        "Passport Photo"
+                    ],
+                    "eligibility": "Adult members of rural households willing to do unskilled manual work.",
+                    "where_to_apply": "Gram Panchayat Office",
+                    "facility_type": "Taluk Office",
+                    "notes": "Wages are directly credited to the linked bank account."
+                },
+                {
+                    "id": "jb_002",
+                    "title": "PM Kaushal Vikas Yojana (PMKVY)",
+                    "keywords": [
+                        "skill training",
+                        "free course",
+                        "job certificate"
+                    ],
+                    "description": "Free skill training and certification to make youth employable.",
+                    "steps": [
+                        "Find a PMKVY training center near you.",
+                        "Choose a job role/course (e.g., Electronics, Healthcare).",
+                        "Complete the training and pass the assessment.",
+                        "Receive a certificate and monetary reward/placement assistance."
+                    ],
+                    "documents_required": [
+                        "Aadhaar Card",
+                        "Bank Account",
+                        "Educational Certificate"
+                    ],
+                    "eligibility": "Unemployed youth or school/college dropouts.",
+                    "where_to_apply": "PMKVY Training Center",
+                    "facility_type": "Common Service Center (CSC)",
+                    "notes": "The training is provided by government-affiliated centers only."
+                },
+                {
+                    "id": "jb_003",
+                    "title": "Employment Exchange Registration",
+                    "keywords": [
+                        "govt job alerts",
+                        "employment card",
+                        "unemployment registration"
+                    ],
+                    "description": "Registration with the state employment exchange to receive job notifications and priority.",
+                    "steps": [
+                        "Visit the state employment exchange portal or office.",
+                        "Enter educational qualifications and experience.",
+                        "Upload certificates for verification.",
+                        "Download the Employment Card with your unique registration number."
+                    ],
+                    "documents_required": [
+                        "Education Certificates",
+                        "Caste Certificate",
+                        "Aadhaar",
+                        "Photo"
+                    ],
+                    "eligibility": "Any citizen seeking employment, aged 18 and above.",
+                    "where_to_apply": "Employment Exchange Office",
+                    "facility_type": "Taluk Office",
+                    "notes": "Renew your registration every 3 years to keep it active."
+                },
+                {
+                    "id": "jb_004",
+                    "title": "PMEGP Loan for Business",
+                    "keywords": [
+                        "business loan",
+                        "startup subsidy",
+                        "shop loan"
+                    ],
+                    "description": "Credit-linked subsidy scheme for setting up new micro-enterprises.",
+                    "steps": [
+                        "Apply on the PMEGP e-portal.",
+                        "Submit a project report for your proposed business.",
+                        "Selected applications are sent to banks for loan approval.",
+                        "Attend mandatory EDP (Entrepreneurship Development) training."
+                    ],
+                    "documents_required": [
+                        "Project Report",
+                        "Aadhaar",
+                        "Caste Certificate",
+                        "Education Proof"
+                    ],
+                    "eligibility": "Individuals above 18 years; at least 8th pass for large projects.",
+                    "where_to_apply": "KVIC Office or Bank",
+                    "facility_type": "Bank Branch",
+                    "notes": "Subsidies range from 15% to 35% of the total project cost."
+                },
+                {
+                    "id": "jb_005",
+                    "title": "PM-SVANidhi (Street Vendor Loan)",
+                    "keywords": [
+                        "vendor loan",
+                        "rekhri loan",
+                        "small business money"
+                    ],
+                    "description": "Collateral-free working capital loan of up to ₹10,000 for street vendors.",
+                    "steps": [
+                        "Apply through the SVANidhi portal or a CSC.",
+                        "Provide the Letter of Recommendation (LoR) from the municipality.",
+                        "Bank processes the application and disburses the amount.",
+                        "Repay on time to become eligible for a higher loan amount."
+                    ],
+                    "documents_required": [
+                        "Aadhaar Card",
+                        "Voter ID",
+                        "Vendor ID/Certificate of Vending"
+                    ],
+                    "eligibility": "Street vendors vending in urban areas on or before March 24, 2020.",
+                    "where_to_apply": "Municipality or CSC",
+                    "facility_type": "Bank Branch",
+                    "notes": "Interest subsidy is available for timely repayment."
+                },
+                {
+                    "id": "jb_006",
+                    "title": "NCS Job Portal",
+                    "keywords": [
+                        "national career service",
+                        "job search",
+                        "private jobs"
+                    ],
+                    "description": "A digital platform connecting job seekers with employers across various sectors.",
+                    "steps": [
+                        "Register as a 'Job Seeker' on the NCS.gov.in portal.",
+                        "Complete your profile with skills and location preferences.",
+                        "Search for jobs and apply directly to employers.",
+                        "Participate in job fairs organized through the portal."
+                    ],
+                    "documents_required": [
+                        "Aadhaar/Identity Proof",
+                        "Educational Certificates"
+                    ],
+                    "eligibility": "Anyone looking for a job or career counselling.",
+                    "where_to_apply": "Online Portal",
+                    "facility_type": "Common Service Center (CSC)",
+                    "notes": "NCS also offers free career assessment tests and video profiles."
+                },
+                {
+                    "id": "jb_007",
+                    "title": "Deen Dayal Upadhyaya Grameen Kaushalya Yojana (DDU-GKY)",
+                    "keywords": [
+                        "rural placement",
+                        "guaranteed job",
+                        "skill training"
+                    ],
+                    "description": "Placement-linked skill training program specifically for rural poor youth.",
+                    "steps": [
+                        "Register at a DDU-GKY training center or through the Gram Panchayat.",
+                        "Undergo a screening process for the chosen trade.",
+                        "Complete the residential/non-residential training program.",
+                        "Get placed in a company and receive a completion certificate."
+                    ],
+                    "documents_required": [
+                        "Aadhaar Card",
+                        "BPL Card/Income Certificate",
+                        "Age Proof"
+                    ],
+                    "eligibility": "Rural youth aged 15-35 years from poor families.",
+                    "where_to_apply": "Block Development Office (BDO)",
+                    "facility_type": "Taluk Office",
+                    "notes": "This scheme focuses on 100% placement for successful candidates."
+                },
+                {
+                    "id": "jb_008",
+                    "title": "National Apprenticeship Promotion Scheme (NAPS)",
+                    "keywords": [
+                        "company training",
+                        "stipend jobs",
+                        "it training"
+                    ],
+                    "description": "Earn while you learn through apprenticeship in various industries with government stipends.",
+                    "steps": [
+                        "Register on the Apprenticeship India portal.",
+                        "Search for apprenticeship opportunities in your desired industry.",
+                        "Apply online and attend the interview.",
+                        "Sign an apprenticeship contract and start training."
+                    ],
+                    "documents_required": [
+                        "Aadhaar Card",
+                        "Bank Account",
+                        "ITI/10th/12th Marksheet"
+                    ],
+                    "eligibility": "Anyone aged 14 and above with minimum 5th class education.",
+                    "where_to_apply": "Apprenticeship Portal",
+                    "facility_type": "Common Service Center (CSC)",
+                    "notes": "Government pays a part of the stipend directly to the apprentice."
+                },
+                {
+                    "id": "jb_009",
+                    "title": "Stand-Up India (SC/ST/Women)",
+                    "keywords": [
+                        "women business loan",
+                        "sc st entrepreneur",
+                        "big loan"
+                    ],
+                    "description": "Bank loans between 10 lakhs and 1 crore for setting up a greenfield enterprise.",
+                    "steps": [
+                        "Visit the Stand-Up India portal or a bank branch.",
+                        "Select 'Trainee Borrower' or 'Ready Borrower' status.",
+                        "Prepare a detailed business plan.",
+                        "Submit the loan application with required collateral/guarantees."
+                    ],
+                    "documents_required": [
+                        "Caste Certificate (if SC/ST)",
+                        "Identity Proof",
+                        "Business Plan",
+                        "Address Proof"
+                    ],
+                    "eligibility": "SC/ST and/or Women entrepreneurs above 18 years.",
+                    "where_to_apply": "Bank Branch",
+                    "facility_type": "Bank Branch",
+                    "notes": "At least 51% shareholding should be with an SC/ST or Woman entrepreneur."
+                },
+                {
+                    "id": "jb_010",
+                    "title": "Mudra Loan (PMMY)",
+                    "keywords": [
+                        "small business loan",
+                        "shishu loan",
+                        "tarun loan"
+                    ],
+                    "description": "Loans for non-corporate, non-farm small/micro enterprises.",
+                    "steps": [
+                        "Identify the loan category: Shishu (up to 50k), Kishore (up to 5L), Tarun (up to 10L).",
+                        "Fill out the Mudra application form available at banks.",
+                        "Provide business registration or proof of setup.",
+                        "Bank evaluates the proposal and sanctions the loan."
+                    ],
+                    "documents_required": [
+                        "Aadhaar Card",
+                        "Address Proof",
+                        "Business Identity Proof"
+                    ],
+                    "eligibility": "Any Indian citizen with a business plan for non-farm income activities.",
+                    "where_to_apply": "Bank Branch",
+                    "facility_type": "Bank Branch",
+                    "notes": "No collateral or processing fees for Shishu category loans."
+                }
+            ]
+        },
+        {
+            "category": "Legal Aid",
+            "items": [
+                {
+                    "id": "lg_001",
+                    "title": "Free Legal Aid (NALSA)",
+                    "keywords": [
+                        "free lawyer",
+                        "court help",
+                        "legal advice"
+                    ],
+                    "description": "Legal assistance provided free of cost to the weaker sections of society.",
+                    "steps": [
+                        "Visit the District Legal Services Authority (DLSA) office.",
+                        "Fill out a simple application form explaining your case.",
+                        "Submit proof of eligibility (Income/Caste certificate).",
+                        "An empanelled lawyer will be assigned to your case."
+                    ],
+                    "documents_required": [
+                        "Aadhaar Card",
+                        "Income Certificate",
+                        "Case Related Documents"
+                    ],
+                    "eligibility": "Women, children, SC/ST, and persons with income below specified limits.",
+                    "where_to_apply": "District Court",
+                    "facility_type": "Taluk Office",
+                    "notes": "Available for both civil and criminal matters."
+                },
+                {
+                    "id": "lg_002",
+                    "title": "Consumer Complaint Filing",
+                    "keywords": [
+                        "consumer court",
+                        "bad product",
+                        "refund help"
+                    ],
+                    "description": "Seek redressal for defective goods or deficient services through consumer commissions.",
+                    "steps": [
+                        "Send a formal notice to the seller giving them 15 days to respond.",
+                        "If unresolved, file a complaint on the 'e-Daakhil' portal.",
+                        "Pay the nominal court fee (if applicable).",
+                        "Attend the hearing on the scheduled date."
+                    ],
+                    "documents_required": [
+                        "Purchase Bill",
+                        "Warranty Card",
+                        "Notice Copy",
+                        "Proof of Payment"
+                    ],
+                    "eligibility": "Any consumer who has purchased goods or services.",
+                    "where_to_apply": "District Consumer Forum",
+                    "facility_type": "Taluk Office",
+                    "notes": "You do not necessarily need a lawyer to file a consumer complaint."
+                },
+                {
+                    "id": "lg_003",
+                    "title": "Women's Helpline (181)",
+                    "keywords": [
+                        "women safety",
+                        "domestic violence",
+                        "legal support for women"
+                    ],
+                    "description": "Emergency response and legal support for women facing violence or distress.",
+                    "steps": [
+                        "Call 181 from any mobile or landline.",
+                        "Explain the situation to the operator.",
+                        "The team will coordinate with police, medical, or legal experts.",
+                        "Visit a One Stop Centre (OSC) for physical support if needed."
+                    ],
+                    "documents_required": [
+                        "None"
+                    ],
+                    "eligibility": "All women and girls in distress.",
+                    "where_to_apply": "Tele-Help",
+                    "facility_type": "Government Hospital",
+                    "notes": "Services are available 24/7 across most states."
+                },
+                {
+                    "id": "lg_004",
+                    "title": "Right to Information (RTI)",
+                    "keywords": [
+                        "rti file",
+                        "government info",
+                        "ask questions"
+                    ],
+                    "description": "Empowers citizens to request information from public authorities.",
+                    "steps": [
+                        "Identify the public authority (Department) holding the information.",
+                        "Write a clear application with specific questions.",
+                        "Pay the ₹10 fee (postal order or online).",
+                        "Information must be provided within 30 days."
+                    ],
+                    "documents_required": [
+                        "Identity Proof (Optional)",
+                        "Application Form"
+                    ],
+                    "eligibility": "Any Indian citizen.",
+                    "where_to_apply": "Public Information Officer (PIO)",
+                    "facility_type": "Taluk Office",
+                    "notes": "BPL applicants are exempt from the RTI fee."
+                },
+                {
+                    "id": "lg_005",
+                    "title": "Senior Citizen Protection (Maintenance Act)",
+                    "keywords": [
+                        "old age rights",
+                        "maintenance from kids",
+                        "property protection"
+                    ],
+                    "description": "Legal right for parents and senior citizens to claim maintenance from their children.",
+                    "steps": [
+                        "Apply at the Maintenance Tribunal (Sub-Divisional Magistrate office).",
+                        "Explain the lack of support or maintenance.",
+                        "Tribunal will issue notice to children/relatives.",
+                        "Tribunal may order a monthly allowance up to ₹10,000 or more."
+                    ],
+                    "documents_required": [
+                        "Age Proof",
+                        "Identity Proof",
+                        "Address Proof"
+                    ],
+                    "eligibility": "Parents or senior citizens unable to maintain themselves.",
+                    "where_to_apply": "Sub-Divisional Magistrate (SDM) Office",
+                    "facility_type": "Taluk Office",
+                    "notes": "Lawyers are not allowed to represent parties in the Maintenance Tribunal."
+                },
+                {
+                    "id": "lg_006",
+                    "title": "Child Protection (Childline 1098)",
+                    "keywords": [
+                        "child labor",
+                        "child abuse",
+                        "lost child"
+                    ],
+                    "description": "Free phone service for children in need of aid and assistance.",
+                    "steps": [
+                        "Dial 1098 from any phone.",
+                        "Provide the location and nature of the concern (e.g., child labor).",
+                        "Childline team will reach the spot for rescue.",
+                        "The child is produced before the Child Welfare Committee (CWC)."
+                    ],
+                    "documents_required": [
+                        "None"
+                    ],
+                    "eligibility": "Any child below 18 years or a citizen reporting a child's plight.",
+                    "where_to_apply": "Tele-Help",
+                    "facility_type": "District Hospital",
+                    "notes": "1098 is a 24-hour national helpline."
+                },
+                {
+                    "id": "lg_007",
+                    "title": "Lok Adalat",
+                    "keywords": [
+                        "speedy justice",
+                        "settlement",
+                        "mutual agreement"
+                    ],
+                    "description": "An alternative forum where cases pending in courts are settled amicably.",
+                    "steps": [
+                        "Submit an application to the court where the case is pending.",
+                        "Alternatively, apply to the Legal Services Authority for pre-litigation cases.",
+                        "Attend the Lok Adalat session.",
+                        "Sign the settlement if both parties agree; the decree is final."
+                    ],
+                    "documents_required": [
+                        "Case File",
+                        "Identity Proof"
+                    ],
+                    "eligibility": "Parties willing to settle disputes (Civil, Matrimonial, Land, etc.).",
+                    "where_to_apply": "District Court / DLSA",
+                    "facility_type": "Taluk Office",
+                    "notes": "There is no court fee in Lok Adalat; if a pending case is settled, the original court fee is refunded."
+                },
+                {
+                    "id": "lg_008",
+                    "title": "One Stop Centre (Sakhi)",
+                    "keywords": [
+                        "women refuge",
+                        "shelter for women",
+                        "legal support"
+                    ],
+                    "description": "Integrated support for women affected by violence, including medical, legal, and shelter.",
+                    "steps": [
+                        "Visit the Sakhi centre located in the district.",
+                        "Speak with the administrator or counselor.",
+                        "Avail medical aid or temporary shelter (up to 5 days).",
+                        "Receive legal guidance or police assistance on-site."
+                    ],
+                    "documents_required": [
+                        "Identity Proof (if available)"
+                    ],
+                    "eligibility": "Any woman facing any form of violence.",
+                    "where_to_apply": "One Stop Centre (OSC)",
+                    "facility_type": "Government Hospital",
+                    "notes": "The center provides a safe space for women to recover and seek justice."
+                },
+                {
+                    "id": "lg_009",
+                    "title": "Cyber Crime Reporting",
+                    "keywords": [
+                        "online fraud",
+                        "hacking",
+                        "stolen money"
+                    ],
+                    "description": "Report financial frauds, social media crimes, and cyber bullying.",
+                    "steps": [
+                        "Visit cybercrime.gov.in or call 1930.",
+                        "Register as a user and file a complaint.",
+                        "Upload screenshots of the fraud and bank transaction details.",
+                        "Submit the complaint to the nearest cyber police station."
+                    ],
+                    "documents_required": [
+                        "Bank Statement",
+                        "Screenshots",
+                        "Aadhaar Card"
+                    ],
+                    "eligibility": "Any victim of online crime.",
+                    "where_to_apply": "Cyber Police Station / Online Portal",
+                    "facility_type": "Taluk Office",
+                    "notes": "Reporting within the 'Golden Hour' (first 2 hours) increases the chance of recovering lost money."
+                },
+                {
+                    "id": "lg_010",
+                    "title": "Victim Compensation Scheme",
+                    "keywords": [
+                        "victim money",
+                        "crime compensation",
+                        "accident relief"
+                    ],
+                    "description": "Financial assistance to victims or their dependents who have suffered loss or injury due to crime.",
+                    "steps": [
+                        "File an FIR at the police station.",
+                        "Apply for compensation at the District Legal Services Authority (DLSA).",
+                        "Submit the medical reports and FIR copy.",
+                        "DLSA will conduct an enquiry and award compensation."
+                    ],
+                    "documents_required": [
+                        "FIR Copy",
+                        "Medical Certificate",
+                        "Death Certificate (if applicable)"
+                    ],
+                    "eligibility": "Victims of specified crimes where the offender is not identified or for rehabilitation.",
+                    "where_to_apply": "District Court / DLSA",
+                    "facility_type": "Taluk Office",
+                    "notes": "Compensation is provided for medical expenses and loss of livelihood."
+                }
+            ]
+        },
+        {
+            "category": "Government",
+            "items": [
+                {
+                    "id": "gv_001",
+                    "title": "Ration Card Application",
+                    "keywords": [
+                        "food security",
+                        "bpl card",
+                        "nfsa"
+                    ],
+                    "description": "Get a Ration Card to purchase subsidized food grains from Fair Price Shops.",
+                    "steps": [
+                        "Obtain the application form from the Taluk/Food office or Akshaya.",
+                        "Attach family photos and address proof.",
+                        "Submit for field verification by the Food Inspector.",
+                        "Collect the Ration Card once approved."
+                    ],
+                    "documents_required": [
+                        "Aadhaar of all members",
+                        "Address Proof",
+                        "Income Certificate"
+                    ],
+                    "eligibility": "Families residing in the state (categories: APL/BPL/Antyodaya).",
+                    "where_to_apply": "Taluk Office or Akshaya Center",
+                    "facility_type": "Akshaya Center",
+                    "notes": "Keep the mobile number updated for OTP-based grain collection."
+                },
+                {
+                    "id": "gv_002",
+                    "title": "Old Age Pension (IGNOAPS)",
+                    "keywords": [
+                        "pension for elderly",
+                        "monthly money",
+                        "60 plus pension"
+                    ],
+                    "description": "Monthly financial assistance for senior citizens from BPL families.",
+                    "steps": [
+                        "Fill out the pension application form at the Panchayat or Municipality.",
+                        "Submit age and BPL status proof.",
+                        "Verification by the Gram Panchayat or Social Welfare Officer.",
+                        "Amount will be credited monthly to the linked bank account."
+                    ],
+                    "documents_required": [
+                        "Aadhaar Card",
+                        "BPL Card",
+                        "Age Proof",
+                        "Bank Passbook"
+                    ],
+                    "eligibility": "Citizens aged 60 years or above belonging to a BPL household.",
+                    "where_to_apply": "Gram Panchayat Office",
+                    "facility_type": "Taluk Office",
+                    "notes": "The amount varies from state to state."
+                },
+                {
+                    "id": "gv_003",
+                    "title": "PM Awas Yojana (Rural/Urban)",
+                    "keywords": [
+                        "house subsidy",
+                        "home construction",
+                        "pakka ghar"
+                    ],
+                    "description": "Financial assistance to build a permanent house for homeless or those living in kutcha houses.",
+                    "steps": [
+                        "Register on the PMAY portal or via the local body.",
+                        "Upload details of current living condition.",
+                        "Wait for the field survey and inclusion in the beneficiary list.",
+                        "Receive funds in installments as construction progresses."
+                    ],
+                    "documents_required": [
+                        "Aadhaar Card",
+                        "Land Ownership Proof",
+                        "Income Certificate",
+                        "Bank Details"
+                    ],
+                    "eligibility": "Families with no permanent house and income within limits.",
+                    "where_to_apply": "Panchayat Office / Municipality",
+                    "facility_type": "Taluk Office",
+                    "notes": "Beneficiary must contribute a small portion of the construction cost."
+                },
+                {
+                    "id": "gv_004",
+                    "title": "PM Kisan Samman Nidhi",
+                    "keywords": [
+                        "farmer money",
+                        "6000 rupees",
+                        "kisan scheme"
+                    ],
+                    "description": "Direct income support of ₹6,000 per year in three installments to farmer families.",
+                    "steps": [
+                        "Register on the PM Kisan portal or via a CSC.",
+                        "Upload landholding documents (Patta/Chitta).",
+                        "Verify the bank account with Aadhaar (e-KYC).",
+                        "Check status online for installment credits."
+                    ],
+                    "documents_required": [
+                        "Aadhaar Card",
+                        "Land Documents",
+                        "Bank Passbook"
+                    ],
+                    "eligibility": "Farmer families with cultivable land in their name.",
+                    "where_to_apply": "CSC Center",
+                    "facility_type": "Common Service Center (CSC)",
+                    "notes": "e-KYC is mandatory to receive the installments."
+                },
+                {
+                    "id": "gv_005",
+                    "title": "Ujjwala Yojana (Free Gas)",
+                    "keywords": [
+                        "gas connection",
+                        "lpg subsidy",
+                        "free cylinder"
+                    ],
+                    "description": "Deposit-free LPG connection for women from poor households.",
+                    "steps": [
+                        "Visit the nearest LPG distributor (Indane, HP, Bharat).",
+                        "Submit the Ujjwala application form.",
+                        "Choose between 14.2kg or 5kg cylinder.",
+                        "Wait for document verification and stove/cylinder delivery."
+                    ],
+                    "documents_required": [
+                        "Aadhaar of all family members",
+                        "BPL Ration Card",
+                        "Bank Account"
+                    ],
+                    "eligibility": "Adult women from BPL or specific categories (SC/ST/forest dwellers).",
+                    "where_to_apply": "Gas Agency",
+                    "facility_type": "Common Service Center (CSC)",
+                    "notes": "Refills are available at subsidized rates."
+                },
+                {
+                    "id": "gv_006",
+                    "title": "Direct Benefit Transfer (DBT) Linking",
+                    "keywords": [
+                        "link aadhaar to bank",
+                        "govt money link",
+                        "dbt"
+                    ],
+                    "description": "Enabling your bank account to receive government subsidies directly.",
+                    "steps": [
+                        "Visit your bank branch with Aadhaar Card.",
+                        "Fill out the DBT linking/NPCI mapping form.",
+                        "Submit the form and get an acknowledgement.",
+                        "Check status on the Aadhaar website."
+                    ],
+                    "documents_required": [
+                        "Aadhaar Card",
+                        "Bank Passbook"
+                    ],
+                    "eligibility": "Any citizen having a bank account and Aadhaar.",
+                    "where_to_apply": "Bank Branch",
+                    "facility_type": "Bank Branch",
+                    "notes": "Only one bank account can be active for DBT at a time."
+                },
+                {
+                    "id": "gv_007",
+                    "title": "Widow Pension Scheme",
+                    "keywords": [
+                        "widow help",
+                        "single mother pension",
+                        "social security"
+                    ],
+                    "description": "Financial support for women after the death of their husband.",
+                    "steps": [
+                        "Collect the application from the Social Welfare Department or portal.",
+                        "Submit the death certificate of the husband.",
+                        "Verification by the local revenue officer.",
+                        "Monthly pension credit starts after approval."
+                    ],
+                    "documents_required": [
+                        "Husband's Death Certificate",
+                        "Age Proof",
+                        "Aadhaar Card",
+                        "Income Certificate"
+                    ],
+                    "eligibility": "Widows aged 18-79 living below the poverty line.",
+                    "where_to_apply": "Taluk Office",
+                    "facility_type": "Taluk Office",
+                    "notes": "Pension stops if the woman remarries or crosses the income limit."
+                },
+                {
+                    "id": "gv_008",
+                    "title": "LPG Subsidy Status Check",
+                    "keywords": [
+                        "gas money back",
+                        "subsidy check",
+                        "pahel"
+                    ],
+                    "description": "Check if you are receiving the subsidy amount in your bank account for LPG refills.",
+                    "steps": [
+                        "Go to mylpg.in portal.",
+                        "Select your gas provider.",
+                        "Click on 'Give your feedback online'.",
+                        "Enter your mobile or LPG ID to view the subsidy history."
+                    ],
+                    "documents_required": [
+                        "LPG ID or Registered Mobile Number"
+                    ],
+                    "eligibility": "Registered LPG consumers.",
+                    "where_to_apply": "Online Portal",
+                    "facility_type": "Common Service Center (CSC)",
+                    "notes": "If not receiving subsidy, check if Aadhaar is linked to the gas ID."
+                },
+                {
+                    "id": "gv_009",
+                    "title": "Birth Registration",
+                    "keywords": [
+                        "birth certificate",
+                        "new born register",
+                        "crs portal"
+                    ],
+                    "description": "Official recording of a birth to obtain a Birth Certificate.",
+                    "steps": [
+                        "Ensure the hospital records the birth in their register.",
+                        "Collect the 'Form 1' or discharge slip from the hospital.",
+                        "Visit the Municipality/Panchayat office within 21 days.",
+                        "Collect the certificate after registration."
+                    ],
+                    "documents_required": [
+                        "Hospital Discharge Slip",
+                        "Parents' Aadhaar Card"
+                    ],
+                    "eligibility": "Parents of the newborn.",
+                    "where_to_apply": "Municipality or Panchayat Office",
+                    "facility_type": "Taluk Office",
+                    "notes": "Registration is free within the first 21 days of birth."
+                },
+                {
+                    "id": "gv_010",
+                    "title": "Fertilizer Subsidy (DBT in Fertilizer)",
+                    "keywords": [
+                        "urea price",
+                        "cheap fertilizer",
+                        "farmer help"
+                    ],
+                    "description": "Provides fertilizers to farmers at subsidized rates through POS machines.",
+                    "steps": [
+                        "Visit a licensed fertilizer retailer.",
+                        "Provide your Aadhaar number or Kisan Credit Card.",
+                        "Perform biometric authentication on the POS machine.",
+                        "Purchase the fertilizer at the subsidized price."
+                    ],
+                    "documents_required": [
+                        "Aadhaar Card",
+                        "Voter ID / KCC"
+                    ],
+                    "eligibility": "All farmers.",
+                    "where_to_apply": "Fertilizer Retail Shop",
+                    "facility_type": "Common Service Center (CSC)",
+                    "notes": "The subsidy is paid by the government directly to the manufacturer based on your purchase."
+                }
+            ]
+        },
+        {
+            "category": "Documents",
+            "items": [
+                {
+                    "id": "doc_001",
+                    "title": "Aadhaar Card Enrollment",
+                    "keywords": [
+                        "new aadhaar",
+                        "identity card",
+                        "uidai"
+                    ],
+                    "description": "Unique 12-digit identity number for all Indian residents.",
+                    "steps": [
+                        "Visit an authorized Aadhaar Enrollment Center.",
+                        "Fill out the enrollment form.",
+                        "Provide biometric data (fingerprints, iris scan) and photo.",
+                        "Collect the acknowledgment slip and wait for the card by post."
+                    ],
+                    "documents_required": [
+                        "Proof of Identity (Voter ID/PAN)",
+                        "Proof of Address"
+                    ],
+                    "eligibility": "All residents of India (including infants).",
+                    "where_to_apply": "Aadhaar Center / Bank / Post Office",
+                    "facility_type": "Bank Branch",
+                    "notes": "Keep your mobile number linked to Aadhaar for online services."
+                },
+                {
+                    "id": "doc_002",
+                    "title": "PAN Card (Permanent Account Number)",
+                    "keywords": [
+                        "income tax card",
+                        "bank account doc",
+                        "pan"
+                    ],
+                    "description": "Required for financial transactions and filing income tax returns.",
+                    "steps": [
+                        "Apply online via NSDL or UTIITSL website.",
+                        "Select Form 49A (for Indian citizens).",
+                        "Upload documents or use Aadhaar-based e-KYC.",
+                        "Pay the processing fee and receive the card by post."
+                    ],
+                    "documents_required": [
+                        "Aadhaar Card",
+                        "Photograph",
+                        "Address Proof"
+                    ],
+                    "eligibility": "Any individual, minor (through parents), or company.",
+                    "where_to_apply": "Online or NSDL Center",
+                    "facility_type": "Common Service Center (CSC)",
+                    "notes": "Instant e-PAN can be generated for free using Aadhaar on the Income Tax portal."
+                },
+                {
+                    "id": "doc_003",
+                    "title": "Voter ID Card (EPIC)",
+                    "keywords": [
+                        "election card",
+                        "voter registration",
+                        "voting"
+                    ],
+                    "description": "Enables citizens to vote in elections and serves as identity proof.",
+                    "steps": [
+                        "Apply on the Voter Portal (NVSP) or use the Voter Helpline App.",
+                        "Fill out 'Form 6' for new registration.",
+                        "Upload photo and age proof.",
+                        "Booth Level Officer (BLO) will visit for physical verification."
+                    ],
+                    "documents_required": [
+                        "Photograph",
+                        "Age Proof (10th marksheet/Birth cert)",
+                        "Address Proof"
+                    ],
+                    "eligibility": "Indian citizens aged 18 years or above.",
+                    "where_to_apply": "Voter Portal / Akshaya Center",
+                    "facility_type": "Akshaya Center",
+                    "notes": "Check your name in the electoral roll before every election."
+                },
+                {
+                    "id": "doc_004",
+                    "title": "Income Certificate",
+                    "keywords": [
+                        "annual income proof",
+                        "salary certificate",
+                        "scholarship doc"
+                    ],
+                    "description": "An official document certifying the annual income of a family.",
+                    "steps": [
+                        "Apply online through the State's e-District portal or at a CSC.",
+                        "Provide salary slips or an affidavit regarding income.",
+                        "Village Officer/Tehsildar will conduct an enquiry.",
+                        "Download the digitally signed certificate."
+                    ],
+                    "documents_required": [
+                        "Aadhaar Card",
+                        "Ration Card",
+                        "Salary Slip / Income Proof"
+                    ],
+                    "eligibility": "Any resident needing proof of income for schemes.",
+                    "where_to_apply": "Akshaya Center / CSC",
+                    "facility_type": "Taluk Office",
+                    "notes": "The certificate is usually valid for one year or one financial year."
+                },
+                {
+                    "id": "doc_005",
+                    "title": "Caste Certificate",
+                    "keywords": [
+                        "sc st certificate",
+                        "obc card",
+                        "community certificate"
+                    ],
+                    "description": "Proof of belonging to a particular caste, used for reservation and scholarships.",
+                    "steps": [
+                        "Apply at the local Tehsildar office or via e-District portal.",
+                        "Provide father’s/relative’s caste certificate as proof.",
+                        "Field verification by the Revenue Inspector.",
+                        "Certificate is issued after approval by the Tehsildar."
+                    ],
+                    "documents_required": [
+                        "School Leaving Certificate",
+                        "Father's Caste Certificate",
+                        "Aadhaar"
+                    ],
+                    "eligibility": "Citizens belonging to SC, ST, or OBC categories.",
+                    "where_to_apply": "Taluk Office / CSC",
+                    "facility_type": "Taluk Office",
+                    "notes": "OBC certificates may require a 'Non-Creamy Layer' status for central government jobs."
+                },
+                {
+                    "id": "doc_006",
+                    "title": "Driving Licence (Learner's)",
+                    "keywords": [
+                        "driving permit",
+                        "llr",
+                        "bike license"
+                    ],
+                    "description": "A temporary license valid for 6 months to learn driving.",
+                    "steps": [
+                        "Apply online on the Sarathi Parivahan portal.",
+                        "Book an appointment for the computer-based learner's test.",
+                        "Pass the test (rules and signs).",
+                        "Download the Learner's Licence immediately."
+                    ],
+                    "documents_required": [
+                        "Aadhaar Card",
+                        "Age Proof",
+                        "Address Proof"
+                    ],
+                    "eligibility": "Aged 16 (for gearless) or 18 (for geared/LMV).",
+                    "where_to_apply": "RTO Office / Online",
+                    "facility_type": "RTO Office",
+                    "notes": "You can apply for a permanent license 30 days after the LL is issued."
+                },
+                {
+                    "id": "doc_007",
+                    "title": "Passport (Fresh)",
+                    "keywords": [
+                        "travel document",
+                        "foreign travel",
+                        "passport application"
+                    ],
+                    "description": "Required for international travel and acts as strong identity proof.",
+                    "steps": [
+                        "Register on the Passport Seva portal.",
+                        "Fill the application form and pay the fee online.",
+                        "Book an appointment at a PSK or POPSK.",
+                        "Complete physical verification and police verification."
+                    ],
+                    "documents_required": [
+                        "Aadhaar Card",
+                        "Birth Certificate/10th Marksheet",
+                        "Address Proof"
+                    ],
+                    "eligibility": "All Indian citizens.",
+                    "where_to_apply": "Passport Seva Kendra (PSK)",
+                    "facility_type": "Taluk Office",
+                    "notes": "Ensure your address matches your documents for smooth police verification."
+                },
+                {
+                    "id": "doc_008",
+                    "title": "Birth Certificate (Late Registration)",
+                    "keywords": [
+                        "old birth cert",
+                        "late birth",
+                        "missing birth record"
+                    ],
+                    "description": "Registering a birth that was not recorded within the first 21 days.",
+                    "steps": [
+                        "Obtain a 'Non-Availability Certificate' from the Municipality.",
+                        "File an affidavit before a Magistrate.",
+                        "Get an order from the Magistrate for late registration.",
+                        "Submit the order to the Registrar to get the certificate."
+                    ],
+                    "documents_required": [
+                        "Affidavit",
+                        "School Record",
+                        "Aadhaar",
+                        "Parents' Identity"
+                    ],
+                    "eligibility": "Any citizen whose birth was not registered.",
+                    "where_to_apply": "Municipality / Magistrate Court",
+                    "facility_type": "Taluk Office",
+                    "notes": "Late registration usually involves a penalty fee."
+                },
+                {
+                    "id": "doc_009",
+                    "title": "Domicile/Residence Certificate",
+                    "keywords": [
+                        "local certificate",
+                        "nativity",
+                        "state resident"
+                    ],
+                    "description": "Proves that a person is a resident of a particular state/UT.",
+                    "steps": [
+                        "Apply through the e-District portal or CSC.",
+                        "Submit proof of residing in the state for a specified number of years.",
+                        "Verification by the local revenue officer.",
+                        "Download the certificate online."
+                    ],
+                    "documents_required": [
+                        "Ration Card",
+                        "Voter ID",
+                        "Aadhaar",
+                        "School Certificate"
+                    ],
+                    "eligibility": "Residents living in the state for a long period (usually 10-15 years).",
+                    "where_to_apply": "Akshaya Center / CSC",
+                    "facility_type": "Taluk Office",
+                    "notes": "Required for state government jobs and local quota in colleges."
+                },
+                {
+                    "id": "doc_010",
+                    "title": "Life Certificate (Jeevan Pramaan)",
+                    "keywords": [
+                        "pensioner proof",
+                        "alive certificate",
+                        "digital life certificate"
+                    ],
+                    "description": "A digital document for pensioners to prove they are alive to continue receiving pension.",
+                    "steps": [
+                        "Visit a CSC or use the Jeevan Pramaan app on a biometric-enabled phone.",
+                        "Provide Aadhaar and Pension Payment Order (PPO) number.",
+                        "Authenticate using a fingerprint or iris scan.",
+                        "The certificate is automatically sent to the Pension Disbursing Agency."
+                    ],
+                    "documents_required": [
+                        "Aadhaar Card",
+                        "PPO Number",
+                        "Bank Passbook"
+                    ],
+                    "eligibility": "Retired government employees and other pensioners.",
+                    "where_to_apply": "CSC Center or Bank",
+                    "facility_type": "Bank Branch",
+                    "notes": "This must be submitted every year, usually in the month of November."
+                }
+            ]
+        },
+        {
+            "category": "Transport",
+            "items": [
+                {
+                    "id": "tr_001",
+                    "title": "Student Bus Pass",
+                    "keywords": [
+                        "school bus pass",
+                        "cheap travel",
+                        "student ticket"
+                    ],
+                    "description": "Discounted or free bus travel for students in government and private schools/colleges.",
+                    "steps": [
+                        "Obtain a bus pass application form from the school or bus depot.",
+                        "Get the form attested by the Principal/Headmaster.",
+                        "Submit the form at the nearest State Transport (RTC) counter.",
+                        "Pay the nominal fee and collect the pass."
+                    ],
+                    "documents_required": [
+                        "Study Certificate",
+                        "Student ID Card",
+                        "Passport Photo"
+                    ],
+                    "eligibility": "Full-time students of recognized educational institutions.",
+                    "where_to_apply": "Bus Depot / RTC Counter",
+                    "facility_type": "Taluk Office",
+                    "notes": "The pass is usually valid for one academic year or semester."
+                },
+                {
+                    "id": "tr_002",
+                    "title": "Senior Citizen Bus Concession",
+                    "keywords": [
+                        "old age travel",
+                        "bus discount",
+                        "senior pass"
+                    ],
+                    "description": "Discounted bus fares for elderly citizens in state-run transport buses.",
+                    "steps": [
+                        "Visit the RTC bus depot with age proof.",
+                        "Register for a Senior Citizen ID Card.",
+                        "Show the card to the conductor while purchasing tickets.",
+                        "Pay the discounted fare (usually 25% to 50% off)."
+                    ],
+                    "documents_required": [
+                        "Aadhaar Card",
+                        "Voter ID",
+                        "Passport Photo"
+                    ],
+                    "eligibility": "Citizens aged 60 years or above.",
+                    "where_to_apply": "Bus Depot / RTC Counter",
+                    "facility_type": "Taluk Office",
+                    "notes": "In some states, travel is completely free for senior citizens."
+                },
+                {
+                    "id": "tr_003",
+                    "title": "Train Ticket Booking (General)",
+                    "keywords": [
+                        "railway ticket",
+                        "irctc",
+                        "train seat"
+                    ],
+                    "description": "Process to book train tickets for travel across India via IRCTC.",
+                    "steps": [
+                        "Register on the IRCTC website or app.",
+                        "Search for trains between your source and destination.",
+                        "Enter passenger details and choose class (Sleeper, 3AC, etc.).",
+                        "Complete payment and download the M-ticket."
+                    ],
+                    "documents_required": [
+                        "Identity Proof (for travel)"
+                    ],
+                    "eligibility": "Any citizen.",
+                    "where_to_apply": "IRCTC Online / Railway Station",
+                    "facility_type": "Common Service Center (CSC)",
+                    "notes": "Always carry a valid original ID proof while travelling."
+                },
+                {
+                    "id": "tr_004",
+                    "title": "Vehicle Registration (RC)",
+                    "keywords": [
+                        "new bike register",
+                        "car rc",
+                        "vehicle paper"
+                    ],
+                    "description": "Official registration of a new motor vehicle with the RTO.",
+                    "steps": [
+                        "Vehicle dealer usually initiates the process online.",
+                        "Pay the road tax and registration fee.",
+                        "Take the vehicle to the RTO for inspection by the MVI.",
+                        "RC is sent to the owner's address by post."
+                    ],
+                    "documents_required": [
+                        "Form 20, 21, 22",
+                        "Insurance Copy",
+                        "Aadhaar Card",
+                        "Sales Invoice"
+                    ],
+                    "eligibility": "Any vehicle owner.",
+                    "where_to_apply": "RTO Office",
+                    "facility_type": "RTO Office",
+                    "notes": "Registration is valid for 15 years for private vehicles."
+                },
+                {
+                    "id": "tr_005",
+                    "title": "Metro Rail Smart Card",
+                    "keywords": [
+                        "metro card",
+                        "train pass",
+                        "city travel"
+                    ],
+                    "description": "A rechargeable card for seamless travel in city metro systems.",
+                    "steps": [
+                        "Visit the Customer Care counter at any Metro station.",
+                        "Pay the security deposit and initial top-up amount.",
+                        "Tap the card at the entry gate to travel.",
+                        "Recharge at kiosks or online when the balance is low."
+                    ],
+                    "documents_required": [
+                        "None for general cards"
+                    ],
+                    "eligibility": "Open to all commuters.",
+                    "where_to_apply": "Metro Station Counter",
+                    "facility_type": "Common Service Center (CSC)",
+                    "notes": "Smart card users often get a 10% discount on every trip."
+                },
+                {
+                    "id": "tr_006",
+                    "title": "High Security Registration Plate (HSRP)",
+                    "keywords": [
+                        "number plate",
+                        "hsrp book",
+                        "new plate"
+                    ],
+                    "description": "Mandatory tamper-proof number plates for all motor vehicles.",
+                    "steps": [
+                        "Book HSRP online through the authorized state portal.",
+                        "Choose your vehicle brand and RTO/Dealer location.",
+                        "Pay the fee and select an appointment slot.",
+                        "Visit the dealer to get the plate fixed on the scheduled date."
+                    ],
+                    "documents_required": [
+                        "RC Copy",
+                        "Aadhaar Card"
+                    ],
+                    "eligibility": "All vehicle owners with old plates.",
+                    "where_to_apply": "Online Portal",
+                    "facility_type": "RTO Office",
+                    "notes": "Do not buy plates from local shops; only authorized HSRP is legal."
+                },
+                {
+                    "id": "tr_007",
+                    "title": "Railway Concession for PWD",
+                    "keywords": [
+                        "handicap train ticket",
+                        "disability concession",
+                        "free train"
+                    ],
+                    "description": "Discounted train fares for persons with disabilities and their escorts.",
+                    "steps": [
+                        "Obtain a Railway Concession Certificate from a government doctor.",
+                        "Apply for the Photo Identity Card for PWD at the DRM office.",
+                        "Use the ID card number while booking tickets on IRCTC.",
+                        "Carry the original ID card during travel."
+                    ],
+                    "documents_required": [
+                        "Disability Certificate",
+                        "Age Proof",
+                        "Passport Photos"
+                    ],
+                    "eligibility": "Persons with specified orthopedic, visual, or mental disabilities.",
+                    "where_to_apply": "DRM Office (Railways)",
+                    "facility_type": "District Hospital",
+                    "notes": "The concession amount varies based on the type of disability."
+                },
+                {
+                    "id": "tr_008",
+                    "title": "Pollution Under Control (PUC) Certificate",
+                    "keywords": [
+                        "emission test",
+                        "smoke check",
+                        "puc card"
+                    ],
+                    "description": "Mandatory certificate checking the emission levels of a vehicle.",
+                    "steps": [
+                        "Take the vehicle to an authorized Emission Testing Center.",
+                        "The technician will test the exhaust using a probe.",
+                        "If within limits, the data is uploaded to the Vahan portal.",
+                        "Pay the fee and collect the printed PUC certificate."
+                    ],
+                    "documents_required": [
+                        "RC Copy"
+                    ],
+                    "eligibility": "All motor vehicle owners.",
+                    "where_to_apply": "Emission Testing Center",
+                    "facility_type": "RTO Office",
+                    "notes": "New vehicles are exempt for the first year. Post that, renewal is every 6-12 months."
+                },
+                {
+                    "id": "tr_009",
+                    "title": "FASTag for Toll Payment",
+                    "keywords": [
+                        "toll tag",
+                        "highway pass",
+                        "fastag recharge"
+                    ],
+                    "description": "Electronic toll collection system to avoid queues at highway toll plazas.",
+                    "steps": [
+                        "Purchase FASTag from a bank, petrol pump, or online (Amazon/Paytm).",
+                        "Link the tag to your vehicle's RC and a prepaid wallet/bank account.",
+                        "Fix the tag on the top middle of the windshield from inside.",
+                        "Ensure sufficient balance for automatic deduction at tolls."
+                    ],
+                    "documents_required": [
+                        "RC Copy",
+                        "Aadhaar Card",
+                        "Vehicle Photo"
+                    ],
+                    "eligibility": "Owners of four-wheelers and larger vehicles.",
+                    "where_to_apply": "Bank Branch / Online",
+                    "facility_type": "Bank Branch",
+                    "notes": "Driving without FASTag in a FASTag lane results in a double toll penalty."
+                },
+                {
+                    "id": "tr_010",
+                    "title": "Driving Licence Renewal",
+                    "keywords": [
+                        "renew dl",
+                        "license expiry",
+                        "expired license"
+                    ],
+                    "description": "Extending the validity of an existing driving licence after expiry.",
+                    "steps": [
+                        "Apply online on the Sarathi portal within 30 days of expiry.",
+                        "Submit a Medical Certificate (Form 1A) if aged over 40.",
+                        "Pay the renewal fee online.",
+                        "Visit RTO for biometric verification (if required) and receive the card by post."
+                    ],
+                    "documents_required": [
+                        "Original DL",
+                        "Medical Certificate",
+                        "Aadhaar Card"
+                    ],
+                    "eligibility": "Holders of a driving licence nearing or recently expired.",
+                    "where_to_apply": "RTO Office / Online",
+                    "facility_type": "RTO Office",
+                    "notes": "If the licence is not renewed within a year of expiry, a re-test may be required."
+                }
+            ]
+        }
+    ]
+}

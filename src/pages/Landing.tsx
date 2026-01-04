@@ -1,191 +1,336 @@
-import { ArrowRight, Mic, Shield, Heart, GraduationCap, Briefcase, Scale, Phone } from "lucide-react";
+import { ArrowRight, Mic, Shield, Bell, Zap, Globe, Heart, GraduationCap, Briefcase, Scale, Smartphone, MessageSquare, AlertCircle, ChevronDown, CheckCircle2, Headphones } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import PricingSection from "@/components/landing/PricingSection";
-import FAQSection from "@/components/landing/FAQSection";
+import { useState } from "react";
 
-const features = [
-  { icon: Heart, label: "Healthcare", description: "Find hospitals, clinics & health schemes" },
-  { icon: GraduationCap, label: "Education", description: "Schools, scholarships & skill programs" },
-  { icon: Briefcase, label: "Jobs", description: "Employment opportunities near you" },
-  { icon: Scale, label: "Legal Aid", description: "Free legal help & rights information" },
-  { icon: Shield, label: "Government", description: "Schemes, documents & services" },
-  { icon: Phone, label: "Emergency", description: "Instant help when you need it most" },
+const slides = [
+    {
+        id: "hero",
+        title: "A Digital Help Desk. Personalized for You.",
+        subtitle: "Sahayak Portal",
+        description: "An inclusive, action-oriented AI platform designed to bridge the gap between people and essential services.",
+        theme: "bg-primary text-white",
+    },
+    {
+        id: "problem",
+        title: "The Problem",
+        description: "The primary challenge isn't the absence of information, but the inability to discover, understand, and act on it.",
+        points: [
+            "Language Barriers",
+            "Low Digital Literacy",
+            "Fragmented Systems",
+            "Unreliable Connectivity"
+        ],
+        theme: "bg-background text-foreground",
+    },
+    {
+        id: "solution",
+        title: "Voice-First Solution",
+        description: "Built for real-world simplicity. Speak your need in your preferred local language.",
+        icon: Mic,
+        points: [
+            "Interprets Intent",
+            "Identifies Nearby Services",
+            "Simple, Non-technical Guidance"
+        ],
+        theme: "bg-primary-soft text-foreground",
+    },
+    {
+        id: "action",
+        title: "Direct Action Enablement",
+        description: "We don't just explain; we enable immediate results.",
+        points: [
+            "One-Tap Calling",
+            "Map Navigation",
+            "Direct Messaging"
+        ],
+        theme: "bg-secondary text-white",
+    },
+    {
+        id: "proactive",
+        title: "Proactive Relationship",
+        description: "The system monitors services in the background and alerts you to every change.",
+        icon: Zap,
+        points: [
+            "Timing & Rule Changes",
+            "Eligibility Updates",
+            "Document Requirements",
+            "Upcoming Deadlines"
+        ],
+        theme: "bg-foreground text-background",
+    },
+    {
+        id: "infrastructure",
+        title: "Social Infrastructure",
+        description: "Designed for rural and semi-urban environments where reliability matters most.",
+        points: [
+            "Phone-Number Based Auth",
+            "Offline SMS Support",
+            "Rapid SOS Mode",
+            "Location Sharing"
+        ],
+        theme: "bg-background text-foreground",
+    },
+    {
+        id: "audio",
+        title: "Conversational Audio",
+        description: "Guidance delivered as short, friendly two-person conversations.",
+        icon: Headphones,
+        points: [
+            "Podcast-style Explaners",
+            "Improved Engagement",
+            "Elderly Friendly"
+        ],
+        theme: "bg-primary-soft text-foreground",
+    }
 ];
 
-const steps = [
-  { number: "1", title: "Speak", description: "Tell us what you need in your language" },
-  { number: "2", title: "Get Guided", description: "Receive step-by-step voice assistance" },
-  { number: "3", title: "Take Action", description: "Connect to services or get help" },
+const plans = [
+    {
+        name: "Free",
+        tagline: "Always Free",
+        description: "Access essential services without paying anything.",
+        features: [
+            "Voice-first AI assistance",
+            "Phone number login (OTP)",
+            "Essential Healthcare & Government services",
+            "Step-by-step guidance",
+            "One-tap call & maps",
+            "SOS / Emergency mode",
+            "Offline SMS for critical alerts"
+        ],
+        buttonText: "Start Free",
+        theme: "border-border",
+        buttonTheme: "bg-primary"
+    },
+    {
+        name: "Plus",
+        tagline: "Optional",
+        description: "Extra support for convenience and multiple languages.",
+        features: [
+            "Multiple languages",
+            "Jobs, Education & Legal aid",
+            "Unlimited service tracking",
+            "Full autonomous updates",
+            "WhatsApp + SMS notifications",
+            "Podcast-style audio tutorials",
+            "Multiple saved locations"
+        ],
+        buttonText: "Learn About Plus",
+        theme: "border-secondary border-2",
+        buttonTheme: "bg-secondary"
+    }
+];
+
+const faqs = [
+    { q: "Is OneTap Sahayak free to use?", a: "Yes, essential services are always free." },
+    { q: "What is the Plus plan?", a: "A tier that funds free access while providing convenience features." },
+    { q: "Do I need to know how to use smartphones?", a: "No, it's designed to be used primarily via voice." },
+    { q: "Can I use it without internet?", a: "Yes, critical updates are sent via SMS." },
+    { q: "How does the SOS feature work?", a: "It provides instant location sharing and voice instructions." }
 ];
 
 export default function Landing() {
-  return (
-    <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        {/* Background gradient - subtle on mobile */}
-        <div className="absolute inset-0 bg-gradient-to-b from-primary-soft to-background opacity-50 md:opacity-100" />
-        
-        <div className="relative container-mobile py-12 md:py-20 lg:py-28">
-          <div className="max-w-3xl mx-auto text-center">
-            {/* Logo */}
-            <div className="inline-flex items-center gap-3 mb-6 md:mb-8">
-              <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-primary flex items-center justify-center shadow-glow-primary">
-                <span className="text-primary-foreground font-bold text-xl md:text-2xl">OT</span>
-              </div>
-              <span className="text-xl md:text-2xl font-bold text-foreground">OneTap Sahayak</span>
-            </div>
+    const [openFaq, setOpenFaq] = useState<number | null>(null);
 
-            {/* Headline */}
-            <h1 className="text-heading mb-4 md:mb-6">
-              Help. <span className="text-primary">One Tap</span> Away.
-            </h1>
-            
-            {/* Subtext */}
-            <p className="text-readable text-muted-foreground mb-8 md:mb-10 max-w-xl mx-auto">
-              Healthcare, government services, legal aid, and emergencies—guided in your language. 
-              Speak your need, get instant help.
-            </p>
-
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-              <Button asChild size="lg" className="w-full sm:w-auto text-base px-8 h-14 shadow-glow-primary">
-                <Link to="/auth">
-                  <Mic className="h-5 w-5 mr-2" />
-                  Start Now
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="w-full sm:w-auto text-base px-8 h-14">
-                <Link to="/demo">
-                  Try Demo
-                  <ArrowRight className="h-5 w-5 ml-2" />
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works */}
-      <section className="py-12 md:py-20 bg-muted/50">
-        <div className="container-mobile">
-          <h2 className="text-subheading text-center mb-8 md:mb-12">
-            How It Works
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-4xl mx-auto">
-            {steps.map((step, index) => (
-              <div 
-                key={step.number}
-                className="relative flex flex-col items-center text-center p-6 bg-card rounded-2xl border border-border"
-              >
-                {/* Step number */}
-                <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg mb-4">
-                  {step.number}
+    return (
+        <div className="min-h-screen bg-background font-sans">
+            {/* Persistent Header */}
+            <header className="fixed top-0 left-0 right-0 h-20 bg-white/90 backdrop-blur-md border-b z-[100] flex items-center px-6 lg:px-12">
+                <div className="flex items-center justify-between w-full max-w-7xl mx-auto">
+                    <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 flex items-center justify-center overflow-hidden">
+                            <img src="/logo.png" alt="Sahayak Logo" className="w-full h-full object-contain" />
+                        </div>
+                        <span className="text-2xl font-black tracking-tighter text-primary">Sahayak</span>
+                    </div>
+                    <div className="flex items-center gap-8 lg:gap-12">
+                        <nav className="hidden md:flex items-center gap-10">
+                            <a href="#problem" className="text-sm font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors flex items-center h-20">Problem</a>
+                            <a href="#solution" className="text-sm font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors flex items-center h-20">Solution</a>
+                            <a href="#pricing" className="text-sm font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors flex items-center h-20">Pricing</a>
+                        </nav>
+                        <div className="h-6 w-px bg-border hidden md:block" />
+                        <div className="flex items-center h-20">
+                            <Button asChild className="rounded-full font-black px-8 h-12 text-base shadow-lg shadow-primary/20 hover:scale-105 transition-transform active:scale-95 leading-none">
+                                <Link to="/auth">Login</Link>
+                            </Button>
+                        </div>
+                    </div>
                 </div>
-                
-                <h3 className="font-semibold text-lg mb-2">{step.title}</h3>
-                <p className="text-muted-foreground text-sm">{step.description}</p>
-                
-                {/* Connector line - hidden on mobile */}
-                {index < steps.length - 1 && (
-                  <div className="hidden md:block absolute top-12 left-full w-full h-0.5 bg-border -translate-x-1/2" />
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </header>
 
-      {/* Features Grid */}
-      <section className="py-12 md:py-20">
-        <div className="container-mobile">
-          <h2 className="text-subheading text-center mb-2">
-            What You Can Do
-          </h2>
-          <p className="text-muted-foreground text-center mb-8 md:mb-12">
-            Essential services, one tap away
-          </p>
-          
-          <div className="bento-grid max-w-4xl mx-auto">
-            {features.map((feature) => (
-              <div 
-                key={feature.label}
-                className="bento-card"
-              >
-                <div className="w-12 h-12 rounded-xl bg-primary-soft flex items-center justify-center mb-3">
-                  <feature.icon className="h-6 w-6 text-primary" />
+            {/* Hero Section - Split Layout on Desktop */}
+            <section className="pitch-section bg-primary text-white lg:min-h-screen">
+                <div className="pitch-content lg:max-w-7xl">
+                    <div className="pitch-grid">
+                        {/* Left Column: Branding row and Title row */}
+                        <div className="space-y-12 text-left">
+                            {/* Row 1: Logo and Name */}
+                            <div className="flex items-center gap-4 animate-fade-in">
+                                <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center shadow-2xl p-1.5">
+                                    <img src="/logo.png" alt="Sahayak Logo" className="w-full h-full object-contain" />
+                                </div>
+                                <div className="space-y-0.5">
+                                    <h2 className="text-2xl font-black tracking-tight uppercase opacity-90">Sahayak</h2>
+                                    <p className="text-xs font-bold tracking-[0.2em] opacity-70">INTELLIGENCE PLATFORM</p>
+                                </div>
+                            </div>
+
+                            {/* Row 2: Big Title and Content */}
+                            <div className="space-y-8">
+                                <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.9] animate-fade-up">
+                                    {slides[0].title}
+                                </h1>
+                                <p className="text-xl md:text-2xl font-medium opacity-90 leading-snug max-w-xl animate-fade-up stagger-2">
+                                    {slides[0].description}
+                                </p>
+                                <div className="pt-8 flex flex-wrap gap-4 animate-fade-up stagger-3">
+                                    <Button asChild size="lg" className="h-16 px-10 rounded-full text-xl shadow-2xl bg-white text-primary hover:bg-white/90 scale-105 transition-transform">
+                                        <Link to="/auth">
+                                            Get Started Now
+                                            <ArrowRight className="ml-2 h-6 w-6" />
+                                        </Link>
+                                    </Button>
+                                    <Button variant="outline" className="h-16 px-8 rounded-full text-xl border-white text-white hover:bg-white/10">
+                                        Learn More
+                                    </Button>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Right Column: Hero Illustration */}
+                        <div className="hidden lg:flex items-center justify-center animate-fade-in stagger-4 relative px-12 py-8">
+                            {/* Static Green Background Rectangle */}
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[85%] bg-secondary rounded-[4rem] shadow-2xl shadow-secondary/20" />
+
+                            {/* Tilted Hero Illustration Card */}
+                            <div className="relative z-10 bg-white rounded-[4rem] shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-700 ease-out border-[12px] border-white overflow-hidden aspect-square max-w-lg">
+                                <img
+                                    src="/hero-illustration.jpg"
+                                    alt="Sahayak Community Support Illustration"
+                                    className="w-full h-full object-cover scale-110"
+                                />
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h3 className="font-semibold text-center">{feature.label}</h3>
-                <p className="text-xs text-muted-foreground text-center mt-1">
-                  {feature.description}
-                </p>
-              </div>
+            </section>
+
+            {/* Following Sections using improved grid distribution */}
+            {slides.slice(1).map((slide, idx) => (
+                <section key={slide.id} id={slide.id} className={`pitch-section ${slide.theme} border-t border-black/5`}>
+                    <div className="pitch-content max-w-6xl">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                            <div className="space-y-6 text-left">
+                                <h2 className="text-4xl md:text-6xl font-black tracking-tighter leading-none">{slide.title}</h2>
+                                <p className="text-xl md:text-2xl font-medium opacity-80 leading-relaxed">{slide.description}</p>
+                            </div>
+                            <div className="grid grid-cols-1 gap-4">
+                                {slide.points?.map((point) => (
+                                    <div key={point} className="flex items-center gap-4 p-5 glass rounded-3xl border border-white/10 shadow-lg">
+                                        <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center shrink-0">
+                                            <CheckCircle2 className="h-6 w-6" />
+                                        </div>
+                                        <span className="font-bold text-lg tracking-tight">{point}</span>
+                                    </div>
+                                ))}
+                                {slide.icon && (
+                                    <div className="hidden lg:flex justify-center p-12">
+                                        <slide.icon className="w-32 h-32 opacity-15" />
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+                </section>
             ))}
-          </div>
+
+            {/* Pricing Slide - Split Layout on Desktop */}
+            <section id="pricing" className="pitch-section bg-white text-foreground">
+                <div className="pitch-content max-w-7xl px-6">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 items-center">
+                        <div className="lg:col-span-1 space-y-6 text-left">
+                            <h2 className="text-5xl md:text-7xl font-black leading-[0.9] tracking-tighter">Ethical Access Model</h2>
+                            <p className="text-xl text-muted-foreground leading-relaxed">Essential services remain free. Forever. Funded by those who need more.</p>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:col-span-2 gap-8">
+                            {plans.map((plan) => (
+                                <div key={plan.name} className={`p-8 rounded-[3rem] flex flex-col space-y-6 shadow-2xl border ${plan.theme} bg-white hover:scale-105 transition-transform duration-300`}>
+                                    <div className="space-y-2">
+                                        <span className={`px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest ${plan.name === 'Free' ? 'bg-primary/10 text-primary' : 'bg-secondary/10 text-secondary'}`}>
+                                            {plan.tagline}
+                                        </span>
+                                        <h3 className="text-5xl font-black tracking-tighter">{plan.name}</h3>
+                                    </div>
+                                    <p className="text-muted-foreground font-medium">{plan.description}</p>
+                                    <div className="flex-1 space-y-4">
+                                        {plan.features.map((f) => (
+                                            <div key={f} className="flex items-start gap-3">
+                                                <CheckCircle2 className={`h-6 w-6 shrink-0 mt-0.5 ${plan.name === 'Free' ? 'text-primary' : 'text-secondary'}`} />
+                                                <span className="text-sm font-bold tracking-tight">{f}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                    <Button className={`h-16 rounded-2xl text-xl font-black text-white ${plan.buttonTheme} shadow-xl`}>
+                                        {plan.buttonText}
+                                    </Button>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* FAQ Slide */}
+            <section className="pitch-section bg-muted/20">
+                <div className="pitch-content max-w-4xl mx-auto px-6">
+                    <div className="text-center mb-16 space-y-4">
+                        <h2 className="text-5xl md:text-7xl font-black tracking-tighter">FAQ</h2>
+                        <p className="text-xl text-muted-foreground font-medium">Clear answers for real concerns.</p>
+                    </div>
+
+                    <div className="space-y-4">
+                        {faqs.map((faq, idx) => (
+                            <div key={idx} className="bg-white border-2 rounded-[2rem] overflow-hidden transition-all shadow-sm hover:shadow-md">
+                                <button
+                                    onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                                    className="w-full p-8 text-left flex justify-between items-center hover:bg-muted/5 transition-colors"
+                                >
+                                    <span className="font-bold text-xl tracking-tight">{faq.q}</span>
+                                    <ChevronDown className={`h-6 w-6 transition-transform duration-500 ${openFaq === idx ? 'rotate-180' : ''}`} />
+                                </button>
+                                <div className={`transition-all duration-500 ease-in-out ${openFaq === idx ? 'max-h-[300px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                                    <div className="p-8 pt-0 text-lg font-medium text-muted-foreground border-t-2 border-dashed bg-muted/5 leading-relaxed">
+                                        {faq.a}
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Final CTA */}
+            <section className="pitch-section bg-foreground text-background text-center py-40">
+                <div className="pitch-content max-w-5xl mx-auto space-y-12 px-6">
+                    <h2 className="text-6xl md:text-9xl font-black tracking-tighter leading-[0.8]">Ready to take action?</h2>
+                    <p className="text-2xl md:text-4xl font-medium opacity-80 max-w-3xl mx-auto leading-tight">
+                        Join the inclusive social infrastructure built for real-world impact. No more information gaps.
+                    </p>
+                    <div className="pt-12">
+                        <Button asChild size="lg" className="h-24 px-16 rounded-full text-3xl font-black shadow-2xl bg-primary text-white hover:bg-primary/90 hover:scale-110 transition-transform">
+                            <Link to="/auth">
+                                Enter Portal Now
+                                <ArrowRight className="ml-4 h-10 w-10" />
+                            </Link>
+                        </Button>
+                    </div>
+                    <p className="pt-24 text-xs font-black uppercase tracking-[0.4em] opacity-40">
+                        OneTap Sahayak &copy; 2026 | Social Infrastructure Platform
+                    </p>
+                </div>
+            </section>
         </div>
-      </section>
-
-      {/* Trust Indicators */}
-      <section className="py-12 md:py-16 bg-muted/50">
-        <div className="container-mobile">
-          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16">
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-primary">10L+</div>
-              <div className="text-sm text-muted-foreground">People Helped</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-primary">22</div>
-              <div className="text-sm text-muted-foreground">Languages</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-primary">500+</div>
-              <div className="text-sm text-muted-foreground">Services</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-secondary">24/7</div>
-              <div className="text-sm text-muted-foreground">Available</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <PricingSection />
-
-      {/* FAQ Section */}
-      <FAQSection />
-
-      {/* Final CTA */}
-      <section className="py-12 md:py-20">
-        <div className="container-mobile text-center">
-          <h2 className="text-subheading mb-4">
-            Ready to Get Help?
-          </h2>
-          <p className="text-muted-foreground mb-8 max-w-md mx-auto">
-            No complicated forms. Just speak and we'll guide you.
-          </p>
-          <Button asChild size="lg" className="text-base px-8 h-14">
-            <Link to="/auth">
-              <Mic className="h-5 w-5 mr-2" />
-              Get Started Free
-            </Link>
-          </Button>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="py-8 border-t border-border">
-        <div className="container-mobile text-center text-sm text-muted-foreground">
-          <p>© 2024 OneTap Sahayak. Built for everyone.</p>
-          <div className="flex items-center justify-center gap-4 mt-4">
-            <Link to="/about" className="hover:text-foreground transition-colors">About</Link>
-            <Link to="/privacy" className="hover:text-foreground transition-colors">Privacy</Link>
-            <Link to="/help" className="hover:text-foreground transition-colors">Help</Link>
-          </div>
-        </div>
-      </footer>
-    </div>
-  );
+    );
 }

@@ -3,36 +3,63 @@ import { useNavigate } from "react-router-dom";
 import { Check, Volume2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { useLanguage } from "@/context/LanguageContext";
+import { mockApi } from "@/utils/mockApi";
 
 const languages = [
   { code: "en", name: "English", native: "English" },
   { code: "hi", name: "Hindi", native: "हिन्दी" },
-  { code: "bn", name: "Bengali", native: "বাংলা" },
-  { code: "te", name: "Telugu", native: "తెలుగు" },
-  { code: "mr", name: "Marathi", native: "मराठी" },
-  { code: "ta", name: "Tamil", native: "தமிழ்" },
-  { code: "gu", name: "Gujarati", native: "ગુજરાતી" },
-  { code: "kn", name: "Kannada", native: "ಕನ್ನಡ" },
   { code: "ml", name: "Malayalam", native: "മലയാളം" },
-  { code: "pa", name: "Punjabi", native: "ਪੰਜਾਬੀ" },
-  { code: "or", name: "Odia", native: "ଓଡ଼ିଆ" },
-  { code: "as", name: "Assamese", native: "অসমীয়া" },
+  { code: "ta", name: "Tamil", native: "தமிழ்" },
+  { code: "te", name: "Telugu", native: "తెలుగు" },
+  { code: "kn", name: "Kannada", native: "കನ್ನಡ" },
 ];
 
 export default function Language() {
   const navigate = useNavigate();
+  const { setLanguage } = useLanguage(); // Use context setter
   const [selected, setSelected] = useState<string | null>(null);
   const [playing, setPlaying] = useState<string | null>(null);
 
-  const handlePlay = (code: string, e: React.MouseEvent) => {
+  const handlePlay = async (code: string, e: React.MouseEvent) => {
     e.stopPropagation();
+    if (playing) return; // Prevent multiple clicks
+
     setPlaying(code);
-    // Simulate audio playing
-    setTimeout(() => setPlaying(null), 2000);
+    try {
+      const data = await mockApi.languages.getSample(code);
+
+      if (data.audio_url) {
+        const audio = new Audio(data.audio_url);
+        audio.onended = () => setPlaying(null);
+        audio.onerror = () => {
+          console.warn("Audio URL failed, falling back to browser TTS");
+          // Fallback to browser TTS
+          const utter = new SpeechSynthesisUtterance(data.text || "Hello");
+          // Map codes to browser voices if possible
+          const voiceMap: Record<string, string> = {
+            'hi': 'hi-IN', 'ta': 'ta-IN', 'te': 'te-IN', 'ml': 'ml-IN', 'kn': 'kn-IN'
+          };
+          utter.lang = voiceMap[code] || 'en-US';
+          utter.onend = () => setPlaying(null);
+          window.speechSynthesis.speak(utter);
+        };
+        await audio.play().catch(e => {
+          console.warn("Audio play error", e);
+          audio.onerror?.(new Event("error"));
+        });
+      } else {
+        setPlaying(null);
+      }
+    } catch (err) {
+      console.error(err);
+      setPlaying(null);
+    }
   };
 
   const handleContinue = () => {
     if (selected) {
+      setLanguage(selected as any); // Update global context
       navigate("/home");
     }
   };
