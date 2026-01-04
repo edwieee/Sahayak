@@ -1,6 +1,8 @@
 import { ArrowRight, Mic, Shield, Heart, GraduationCap, Briefcase, Scale, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import PricingSection from "@/components/landing/PricingSection";
+import FAQSection from "@/components/landing/FAQSection";
 
 const features = [
   { icon: Heart, label: "Healthcare", description: "Find hospitals, clinics & health schemes" },
@@ -148,6 +150,12 @@ export default function Landing() {
           </div>
         </div>
       </section>
+
+      {/* Pricing Section */}
+      <PricingSection />
+
+      {/* FAQ Section */}
+      <FAQSection />
 
       {/* Final CTA */}
       <section className="py-12 md:py-20">
