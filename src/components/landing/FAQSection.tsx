@@ -8,63 +8,63 @@ import {
 const faqItems = [
   {
     id: "item-1",
-    question: "Is OneTap Sahayak free to use?",
+    question: "What is OneTap Sahayak?",
     answer:
-      "Yes. Access to essential services like healthcare, government help, and emergency support is always free.",
+      "OneTap Sahayak is a voice-first AI assistant that helps people easily access healthcare, government services, education, jobs, legal aid, and emergency support.",
   },
   {
     id: "item-2",
-    question: "What is the Plus plan?",
+    question: "Is OneTap Sahayak free to use?",
     answer:
-      "Plus is optional. It offers extra convenience such as multiple languages, WhatsApp updates, and continuous follow-ups.",
+      "Yes. All essential services and emergency support are completely free for everyone.",
   },
   {
     id: "item-3",
-    question: "Do I need to know how to use smartphones?",
+    question: "How do I use OneTap Sahayak?",
     answer:
-      "No. OneTap Sahayak is voice-first and designed for first-time users, elderly people, and anyone uncomfortable with apps.",
+      "Just speak your need in your local language. The system understands your request and guides you step by step to the right service.",
   },
   {
     id: "item-4",
-    question: "Which services are available?",
+    question: "Do I need to know how to use apps or smartphones?",
     answer:
-      "Healthcare, government services, and emergency help are available for everyone. Jobs, education, and legal aid are also supported.",
+      "No. OneTap Sahayak is designed for first-time users, elderly people, and anyone with low digital literacy. Voice is enough.",
   },
   {
     id: "item-5",
-    question: "Does it support local languages?",
+    question: "Which services are supported?",
     answer:
-      "Yes. You can use OneTap Sahayak in your local language. Multiple languages are available with assisted access.",
+      "Healthcare, government schemes, and emergency help are available for everyone. Education, jobs, and legal aid are also supported.",
   },
   {
     id: "item-6",
-    question: "Will I get updates after my request?",
+    question: "Will I get updates after I request a service?",
     answer:
-      "Yes. If service details change, you will automatically receive updates through notifications or SMS.",
+      "Yes. If timings, eligibility, documents, or deadlines change, you will automatically receive updates through notifications or SMS.",
   },
   {
     id: "item-7",
-    question: "Can I use it without internet?",
+    question: "Can I use OneTap Sahayak without internet?",
     answer:
-      "Yes. Important updates and reminders can be sent via SMS when internet access is poor or unavailable.",
+      "Yes. Even with low or no internet, you can receive important updates and reminders through SMS.",
   },
   {
     id: "item-8",
-    question: "How does the SOS feature work?",
+    question: "What is the SOS feature?",
     answer:
-      "SOS mode provides instant access to emergency contacts, location sharing, and voice-guided steps.",
+      "SOS mode gives instant access to emergency contacts, location sharing, and voice-guided instructions during urgent situations.",
   },
   {
     id: "item-9",
-    question: "Is my phone number safe?",
+    question: "Is my phone number safe and private?",
     answer:
-      "Yes. Your number is used only for login and updates. It is never shared or used for advertising.",
+      "Yes. Your phone number is used only for login and service updates. It is never shared or used for advertising.",
   },
   {
     id: "item-10",
-    question: "Is this a replacement for government offices?",
+    question: "Does OneTap Sahayak replace government offices?",
     answer:
-      "No. OneTap Sahayak helps you understand and reach services faster. It works alongside existing systems.",
+      "No. It works alongside existing systems by helping you understand services and reach the right place faster.",
   },
 ];
 

@@ -3,13 +3,15 @@ import { useState, useEffect } from "react";
 import {
   ArrowLeft, Volume2, MapPin,
   CheckCircle2, FileText, UserCheck,
-  AlertTriangle, Phone, ExternalLink, Heart, Eye
+  AlertTriangle, Phone, ExternalLink, Heart, Eye, Headphones
 } from "lucide-react";
 import { AppLayout } from "@/components/layout/AppLayout";
 import { Button } from "@/components/ui/button";
 import { getItemById } from "@/utils/serviceData";
 import { MOCK_FACILITIES, calculateDistance } from "@/utils/location";
 import { speak, stopSpeaking } from "@/utils/voice";
+import { generatePodcastScript, speakPodcast, stopPodcast } from "@/utils/podcast";
+import { PodcastPlayer } from "@/components/podcast/PodcastPlayer";
 import { useAuth } from "@/context/AuthContext";
 import { toast } from "sonner";
 import { mockApi } from "@/utils/mockApi";
@@ -21,6 +23,8 @@ export default function ServiceDetail() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isSaved, setIsSaved] = useState(false);
   const [nearestFacility, setNearestFacility] = useState<any>(null);
+  const [isPodcastOpen, setIsPodcastOpen] = useState(false);
+  const [podcastScript, setPodcastScript] = useState("");
 
   const item = getItemById(id || "");
 
@@ -69,6 +73,28 @@ export default function ServiceDetail() {
     speak(textToSpeak, () => setIsPlaying(false));
   };
 
+  const handlePodcast = () => {
+    const script = generatePodcastScript({
+      title: item.title,
+      description: item.description,
+      steps: item.steps,
+      documents_required: item.documents_required,
+      eligibility: item.eligibility,
+      notes: item.notes,
+      category: item.category
+    });
+    setPodcastScript(script);
+    setIsPodcastOpen(true);
+  };
+
+  const handlePodcastPlay = (onProgress: (progress: number) => void) => {
+    speakPodcast(podcastScript, () => { }, onProgress);
+  };
+
+  const handlePodcastStop = () => {
+    stopPodcast();
+  };
+
   return (
     <AppLayout status="core">
       <div className="container-mobile py-6 space-y-6 pb-24">
@@ -90,6 +116,15 @@ export default function ServiceDetail() {
             <Button size="sm" variant={isPlaying ? "destructive" : "outline"} className="rounded-full gap-2" onClick={handleListen}>
               <Volume2 className={`h-4 w-4 ${isPlaying ? "animate-pulse" : ""}`} />
               {isPlaying ? "Stop" : "Listen"}
+            </Button>
+            <Button
+              size="sm"
+              variant="outline"
+              className="rounded-full gap-2 bg-gradient-to-r from-purple-50 to-blue-50 border-purple-200 text-purple-700 hover:from-purple-100 hover:to-blue-100"
+              onClick={handlePodcast}
+            >
+              <Headphones className="h-4 w-4" />
+              Podcast
             </Button>
           </div>
         </div>
@@ -167,6 +202,16 @@ export default function ServiceDetail() {
           </section>
         </div>
       </div>
+
+      {/* Podcast Player Dialog */}
+      <PodcastPlayer
+        isOpen={isPodcastOpen}
+        onClose={() => setIsPodcastOpen(false)}
+        script={podcastScript}
+        title={item.title}
+        onPlay={handlePodcastPlay}
+        onStop={handlePodcastStop}
+      />
     </AppLayout>
   );
 }

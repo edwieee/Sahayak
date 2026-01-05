@@ -2,6 +2,7 @@ import { ArrowRight, Mic, Shield, Bell, Zap, Globe, Heart, GraduationCap, Briefc
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { DemoSection } from "@/components/landing/DemoSection";
 
 const slides = [
     {
@@ -148,6 +149,7 @@ export default function Landing() {
                         <nav className="hidden md:flex items-center gap-10">
                             <a href="#problem" className="text-sm font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors flex items-center h-20">Problem</a>
                             <a href="#solution" className="text-sm font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors flex items-center h-20">Solution</a>
+                            <a href="#demo" className="text-sm font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors flex items-center h-20">Demo</a>
                             <a href="#pricing" className="text-sm font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors flex items-center h-20">Pricing</a>
                         </nav>
                         <div className="h-6 w-px bg-border hidden md:block" />
@@ -192,8 +194,8 @@ export default function Landing() {
                                             <ArrowRight className="ml-2 h-6 w-6" />
                                         </Link>
                                     </Button>
-                                    <Button variant="outline" className="h-16 px-8 rounded-full text-xl border-white text-white hover:bg-white/10">
-                                        Learn More
+                                    <Button asChild variant="outline" className="h-16 px-8 rounded-full text-xl border-white text-white hover:bg-white/10">
+                                        <a href="#demo">See Demo</a>
                                     </Button>
                                 </div>
                             </div>
@@ -245,6 +247,9 @@ export default function Landing() {
                     </div>
                 </section>
             ))}
+
+            {/* Demo Section */}
+            <DemoSection />
 
             {/* Pricing Slide - Split Layout on Desktop */}
             <section id="pricing" className="pitch-section bg-white text-foreground">
