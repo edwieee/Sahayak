@@ -40,7 +40,7 @@ https://sahayak-sandy.vercel.app/
 
 ### Home Page
 
-![Home Page](screenshots/home.png)
+![Screenrecording](Screen Recording 2026-05-26 232026.gif)
 
 ### Voice Interaction
 
