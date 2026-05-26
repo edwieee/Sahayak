@@ -51,7 +51,7 @@ https://github.com/THARUN-KRSHN/Sahayak-A-Digital-Help-Desk
 
 ## Team Members
 
-*Tharun Krishna
+* Tharun Krishna
 * Chrismon P Lijo
 * Edwin Biju
 * Ruthurag Mohan
