@@ -36,21 +36,11 @@ React • Tailwind CSS • Flask • SQLite • Gemini API
 Live Demo:
 https://sahayak-sandy.vercel.app/
 
-## Screenshots
+## Screenrecording
 
-### Home Page
+![Demo](demo.gif)
 
-![Screenrecording](Screen Recording 2026-05-26 232026.gif)
 
-### Voice Interaction
-
-![Voice Interaction](screenshots/voice-flow.png)
-
-### Service Assistance
-
-![Service Assistance](screenshots/services.png)
-
----
 
 ## Original Team Repository
 
